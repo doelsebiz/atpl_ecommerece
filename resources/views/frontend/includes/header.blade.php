@@ -16,86 +16,18 @@
             </div>
         </div>
     </div>
-
-    <div class="header-sidebar">
-        <div class="siderbar-top">
-            <div class="sidebar-log">
-                <a href="index.html"><img src="assets/img/logo.svg" alt></a>
-            </div>
-            <div class="close-btn">
-                <i class="bi bi-x-lg"></i>
-            </div>
-        </div>
-        <div class="sidebar-content">
-            <p>Duis a orci nunc. Suspendisse ac convallis sapien, quis commodo libero. Donec nec duomoi luctus, pellentesque lacus sed, mollis going leo.</p>
-        </div>
-        <div class="address-card">
-            <div class="content">
-                <div class="informations">
-                    <div class="single-info">
-                        <div class="icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="info">
-                            <p>168/170, Avenue 01, Old York Drive Rich Mirpur DOHS, Bangladesh</p>
-                        </div>
-                    </div>
-                    <div class="single-info">
-                        <div class="icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="info">
-                            <a href="tel:05661111985">+880 566 1111 985</a>
-                            <a href="tel:06571111576">+880 657 1111 576</a>
-                        </div>
-                    </div>
-                    <div class="single-info">
-                        <div class="icon">
-                            <i class="far fa-envelope"></i>
-                        </div>
-                        <div class="info">
-                            <a href="/cdn-cgi/l/email-protection#aa8ac3c4ccc5eacfd2cbc7dac6cf84c9c5c7"><span class="__cf_email__" data-cfemail="b2dbdcd4ddf2d7cad3dfc2ded79cd1dddf">[email&#160;protected]</span></a>
-                            <a href="/cdn-cgi/l/email-protection#a080c9cec6cfe0d3d5d0d0cfd2d48ec3cfcd"><span class="__cf_email__" data-cfemail="553c3b333a15262025253a27217b363a38">[email&#160;protected]</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="follow-area">
-            <h5 class="blog-widget-title">Follow Us</h5>
-            <p class="para">Follow us on Social Network</p>
-            <div class="blog-widget-body">
-                <ul class="follow-list d-flex flex-row align-items-start gap-4">
-                    <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
-                    <li><a href="https://www.twitter.com/"><i class="bx bxl-twitter"></i></a></li>
-                    <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
-                    <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
     <header class="header-area2 one">
         <div class="header-logo">
-            <a href="index.html"><img alt="image" class="img-fluid" src="assets/img/logo.svg"></a>
+            <a href="index.html"><h1 style="color: white;margin-bottom: 0px;">ATPL</h1></a>
         </div>
         <div class="main-menu">
             <div class="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
                 <div class="mobile-logo-wrap">
-                    <a href="index.html"><img alt="image" src="assets/img/logo.svg"></a>
+                    <a href="index.html"><h1 style="color: white;margin-bottom: 0px;">ATPL</h1></a>
                 </div>
             </div>
             <ul class="menu-list">
-                <li class="menu-item-has-children active">
-                    <a href="#" class="drop-down">Home</a><i class="bi bi-plus dropdown-icon"></i>
-                    <ul class="sub-menu">
-                        <li><a href="index.html">Home 01</a></li>
-                        <li><a href="index2.html">Home 02</a></li>
-                        <li><a href="index3.html">Home 03</a></li>
-                        <li><a href="index4.html">Home 04</a></li>
-                    </ul>
-                </li>
+                <li><a href="{{ url('') }}">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li class="menu-item-has-children">
                     <a href="#" class="drop-down">Service</a><i class="bi bi-plus dropdown-icon"></i>
@@ -201,11 +133,6 @@
             </div>
         </div>
         <div class="nav-right d-flex jsutify-content-end align-items-center">
-            <div class="sidebar-btn2">
-                <img src="assets/img/home-3/sidebar-btn.svg" alt>
-            </div>
-            <div class="sidebar-button mobile-menu-btn ">
-                <span></span>
-            </div>
+            
         </div>
     </header>
