@@ -193,8 +193,8 @@ video {
 }
 
 .section-title-3 {
-    max-width: 720px;
-    width: 100%
+    width: 100%;
+    text-align:center;
 }
 
 .section-title-3 h2 {
@@ -427,7 +427,10 @@ video {
     transition: all .8s ease-out 0s;
     border-bottom: 1px solid rgba(255, 255, 255, .1)
 }
-
+.solution-icon{
+    font-size: 65px !important;
+    color: var(--theme-color);
+}
 @media(max-width:1700px) {
     .header-area2 {
         padding: 0 7%
@@ -5434,6 +5437,15 @@ video {
     display: flex;
     align-items: center;
     gap: 12px
+
+}
+
+.home3-solution-section .solution-card .solution-content .solution-feature li::before {
+    content: "\2022";
+    color: #1bbc9b;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
 }
 
 .home3-solution-section .solution-card .solution-content .solution-feature li svg {
