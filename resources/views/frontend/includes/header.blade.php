@@ -1,4 +1,4 @@
-<div class="preloader">
+<!-- <div class="preloader">
         <div id="particles-background" class="vertical-centered-box"></div>
         <div id="particles-foreground" class="vertical-centered-box"></div>
         <div class="vertical-centered-box">
@@ -15,7 +15,7 @@
 </svg>
             </div>
         </div>
-    </div>
+    </div> -->
     <header class="header-area2 one">
         <div class="header-logo">
             <a href="index.html"><h1 style="color: white;margin-bottom: 0px;">ATPL</h1></a>
@@ -27,10 +27,9 @@
                 </div>
             </div>
             <ul class="menu-list">
-                <li><a href="{{ url('') }}">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="{{ url('') }}">Services</a></li>
                 <li class="menu-item-has-children">
-                    <a href="#" class="drop-down">Service</a><i class="bi bi-plus dropdown-icon"></i>
+                    <a href="#" class="drop-down">Industry</a><i class="bi bi-plus dropdown-icon"></i>
                     <ul class="sub-menu">
                         <li><a href="service.html">Service 01</a></li>
                         <li><a href="service2.html">Service 02</a></li>
@@ -40,7 +39,7 @@
                     </ul>
                 </li>
                 <li class="menu-item-has-children">
-                    <a href="#" class="drop-down">Project</a><i class="bi bi-plus dropdown-icon"></i>
+                    <a href="#" class="drop-down">Business Models</a><i class="bi bi-plus dropdown-icon"></i>
                     <ul class="sub-menu">
                         <li><a href="project.html">Project</a></li>
                         <li><a href="project-masonary.html">Project Masonry</a></li>
@@ -48,39 +47,13 @@
                     </ul>
                 </li>
                 <li class="menu-item-has-children">
-                    <a href="#" class="drop-down">Pages</a><i class="bi bi-plus dropdown-icon"></i>
+                    <a href="#" class="drop-down">Company</a><i class="bi bi-plus dropdown-icon"></i>
                     <ul class="sub-menu">
-                        <li>
-                            <a href="team1.html">Team</a>
-                            <i class="d-lg-flex d-none bi bi-chevron-right dropdown-icon"></i>
-                            <i class="d-lg-none d-flex bi bi-plus dropdown-icon"></i>
-                            <ul class="sub-menu">
-                                <li><a href="team1.html">Team 01</a></li>
-                                <li><a href="team2.html">Team 02</a></li>
-                                <li><a href="team3.html">Team 03</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="pricing.html">Pricing</a>
-                            <i class="d-lg-flex d-none bi bi-chevron-right dropdown-icon"></i>
-                            <i class="d-lg-none d-flex bi bi-plus dropdown-icon"></i>
-                            <ul class="sub-menu">
-                                <li><a href="pricing.html">Pricing 01</a></li>
-                                <li><a href="pricing2.html">Pricing 02</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="faq.html">FAQs</a></li>
-                        <li><a href="error.html">Error 404</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item-has-children">
-                    <a href="#" class="drop-down">Case Study</a><i class="bi bi-plus dropdown-icon"></i>
-                    <ul class="sub-menu">
-                        <li><a href="case-study.html">Case study 01</a></li>
-                        <li><a href="case-study2.html">Case study 02</a></li>
-                        <li><a href="case-study-standard.html">Case study standard</a></li>
-                        <li><a href="case-study-details.html">Case study Details</a></li>
+                        <li><a href="case-study.html"><span class="material-symbols-outlined">
+whatshot
+</span> About US</a></li>
+                        <li><a href="case-study2.html">Contact US</a></li>
+                        <li><a href="case-study-standard.html">FAQ</a></li>
                     </ul>
                 </li>
                 <li class="menu-item-has-children">

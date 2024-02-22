@@ -4,183 +4,28 @@
 <link rel="canonical" href="{{Request::url()}}">
 @endsection
 @section('content')
-<div class="banner-area3">
-  <div class="scroll-down">
-      <a href="#home3-partner-area">
-Scroll Down
-<span>
-<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 1H12M12 1V13M12 1L0.5 12" />
-</svg>
-</span>
-</a>
-  </div>
-  <div class="banner-vector">
-      <img class="img-fluid" src="{{ url('public/front/img/home-3/banner-vector.png') }}" alt>
-  </div>
-  <div class="swiper-pagination1"></div>
-  <div class="social-area">
-      <ul>
-          <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
-          <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
-          <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
-          <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
-      </ul>
-  </div>
-  <div class="swiper banner3-slider">
-      <div class="swiper-wrapper">
-          <div class="swiper-slide">
-              <div class="banner-wrapper">
-                  <div class="banner-content">
-                      <h1>Grow Your Business With Innovative Ideas.</h1>
-                      <p>Duis a orci nunc. Suspendisse ac convallis sapien, quis commodo libero. Donec nec duomoi luctus, pellentesque lacus sed, mollis going leo.</p>
-                      <div class="banner-btn-group">
-                          <a class="primary-btn3" href="contact.html">Free Consultancy</a>
-                          <a class="primary-btn4" href="about.html">
-<span>
-<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 1H12M12 1V13M12 1L0.5 12" />
-</svg>
-</span>
-Explore More
-</a>
-                      </div>
-                  </div>
-                  <div class="banner-image magnetic-item">
-                      <img class="img-fluid" src="{{ url('public/front/img/home-3/home3-banner-img.png') }}" alt>
-                  </div>
-                  <div class="banner-video-area">
-                      <div class="video-area">
-                          <a data-fancybox="gallery" class="video-popup" href="https://www.youtube.com/watch?v=u31qwQUeGuM&ab_channel=JoomlaTemplate">
-<svg width="30" height="34" viewBox="0 0 30 34" xmlns="http://www.w3.org/2000/svg">
-<path opacity="0.3" d="M30 17.0012C30 16.0359 29.4735 15.1469 28.5906 14.6218L4.75661 0.46019C3.79257 -0.111681 2.61693 -0.153462 1.60777 0.351093C0.601772 0.855365 0 1.78612 0 2.83996V31.1609C0 32.2148 0.601723 33.1452 1.60931 33.6498C2.079 33.8837 2.5828 34 3.08665 34C3.66595 34 4.24144 33.8456 4.75628 33.5407L28.5903 19.3813C29.4734 18.8559 30 17.9669 30 17.0016V17.0012ZM27.7302 18.1537L3.89624 32.3131C3.42844 32.5905 2.85862 32.6093 2.36997 32.3668C1.88133 32.1225 1.58884 31.6719 1.58884 31.1607V2.83969C1.58884 2.32846 1.88133 1.8761 2.36997 1.63359C2.59834 1.52102 2.84346 1.46385 3.08699 1.46385C3.36811 1.46385 3.64734 1.53842 3.89658 1.68755L27.7306 15.8492C28.1646 16.1074 28.4135 16.5287 28.4135 17.0033C28.4131 17.4763 28.1642 17.8955 27.7302 18.1537Z" />
-</svg>
-</a>
-                          <img class="video-img" src="{{ url('public/front/img/home-3/home3-banner-video.png') }}" alt>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="swiper-slide">
-              <div class="banner-wrapper">
-                  <div class="banner-content">
-                      <h1>Grow Your Business With Innovative Ideas.</h1>
-                      <p>Duis a orci nunc. Suspendisse ac convallis sapien, quis commodo libero. Donec nec duomoi luctus, pellentesque lacus sed, mollis going leo.</p>
-                      <div class="banner-btn-group">
-                          <a class="primary-btn3" href="contact.html">Free Consultancy</a>
-                          <a class="primary-btn4" href="about.html">
-<span>
-<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 1H12M12 1V13M12 1L0.5 12" />
-</svg>
-</span>
-Explore More
-</a>
-                      </div>
-                  </div>
-                  <div class="banner-image magnetic-item">
-                      <img class="img-fluid" src="{{ url('public/front/img/home-3/home3-banner-img3.png') }}" alt>
-                  </div>
-                  <div class="banner-video-area">
-                      <div class="video-area">
-                          <a data-fancybox="gallery" class="video-popup" href="https://www.youtube.com/watch?v=u31qwQUeGuM&ab_channel=JoomlaTemplate">
-<svg width="30" height="34" viewBox="0 0 30 34" xmlns="http://www.w3.org/2000/svg">
-<path opacity="0.3" d="M30 17.0012C30 16.0359 29.4735 15.1469 28.5906 14.6218L4.75661 0.46019C3.79257 -0.111681 2.61693 -0.153462 1.60777 0.351093C0.601772 0.855365 0 1.78612 0 2.83996V31.1609C0 32.2148 0.601723 33.1452 1.60931 33.6498C2.079 33.8837 2.5828 34 3.08665 34C3.66595 34 4.24144 33.8456 4.75628 33.5407L28.5903 19.3813C29.4734 18.8559 30 17.9669 30 17.0016V17.0012ZM27.7302 18.1537L3.89624 32.3131C3.42844 32.5905 2.85862 32.6093 2.36997 32.3668C1.88133 32.1225 1.58884 31.6719 1.58884 31.1607V2.83969C1.58884 2.32846 1.88133 1.8761 2.36997 1.63359C2.59834 1.52102 2.84346 1.46385 3.08699 1.46385C3.36811 1.46385 3.64734 1.53842 3.89658 1.68755L27.7306 15.8492C28.1646 16.1074 28.4135 16.5287 28.4135 17.0033C28.4131 17.4763 28.1642 17.8955 27.7302 18.1537Z" />
-</svg>
-</a>
-                          <img class="video-img" src="{{ url('public/front/img/home-3/home3-banner-video.png') }}" alt>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="swiper-slide">
-              <div class="banner-wrapper">
-                  <div class="banner-content">
-                      <h1>Grow Your Business With Innovative Ideas.</h1>
-                      <p>Duis a orci nunc. Suspendisse ac convallis sapien, quis commodo libero. Donec nec duomoi luctus, pellentesque lacus sed, mollis going leo.</p>
-                      <div class="banner-btn-group">
-                          <a class="primary-btn3" href="contact.html">Free Consultancy</a>
-                          <a class="primary-btn4" href="about.html">
-<span>
-<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 1H12M12 1V13M12 1L0.5 12" />
-</svg>
-</span>
-Explore More
-</a>
-                      </div>
-                  </div>
-                  <div class="banner-image magnetic-item">
-                      <img class="img-fluid" src="{{ url('public/front/img/home-3/home3-banner-img2.png') }}" alt>
-                  </div>
-                  <div class="banner-video-area">
-                      <div class="video-area">
-                          <a data-fancybox="gallery" class="video-popup" href="https://www.youtube.com/watch?v=u31qwQUeGuM&ab_channel=JoomlaTemplate">
-<svg width="30" height="34" viewBox="0 0 30 34" xmlns="http://www.w3.org/2000/svg">
-<path opacity="0.3" d="M30 17.0012C30 16.0359 29.4735 15.1469 28.5906 14.6218L4.75661 0.46019C3.79257 -0.111681 2.61693 -0.153462 1.60777 0.351093C0.601772 0.855365 0 1.78612 0 2.83996V31.1609C0 32.2148 0.601723 33.1452 1.60931 33.6498C2.079 33.8837 2.5828 34 3.08665 34C3.66595 34 4.24144 33.8456 4.75628 33.5407L28.5903 19.3813C29.4734 18.8559 30 17.9669 30 17.0016V17.0012ZM27.7302 18.1537L3.89624 32.3131C3.42844 32.5905 2.85862 32.6093 2.36997 32.3668C1.88133 32.1225 1.58884 31.6719 1.58884 31.1607V2.83969C1.58884 2.32846 1.88133 1.8761 2.36997 1.63359C2.59834 1.52102 2.84346 1.46385 3.08699 1.46385C3.36811 1.46385 3.64734 1.53842 3.89658 1.68755L27.7306 15.8492C28.1646 16.1074 28.4135 16.5287 28.4135 17.0033C28.4131 17.4763 28.1642 17.8955 27.7302 18.1537Z" />
-</svg>
-</a>
-                          <img class="video-img" src="{{ url('public/front/img/home-3/home3-banner-video.png') }}" alt>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-
-
-<div class="home3-partner-area" id="home3-partner-area">
+<div class="home3-solution-section">
   <div class="container-fluid">
-      <div class="row g-4">
-          <div class="col-lg-3">
-              <div class="partner-title">
-                  <h3>Our Collaborators</h3>
-              </div>
-          </div>
-          <div class="col-lg-9">
-              <div class="partner-wrapper">
-                  <div class="marquee_text">
-                      <img src="{{ url('public/front/img/home-3/partner-01.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/star.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/partner-02.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/star.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/partner-03.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/star.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/partner-04.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/star.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/partner-05.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/star.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/partner-01.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/star.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/partner-02.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/star.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/partner-03.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/star.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/partner-04.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/star.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/partner-05.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/star.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/partner-01.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/star.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/partner-02.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/star.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/partner-03.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/star.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/partner-04.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/star.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/partner-05.svg') }}" alt>
-                      <img src="{{ url('public/front/img/home-3/star.svg') }}" alt>
+      <div class="headersection">
+          <div class="row">
+              <div class="col-md-6"> 
+                  <div class="heading">
+                      <h1 class="text-white">Transforming The Way YouLaunch.</h1>
+                      <h1>Run. Grow YourBusiness Digitally</h1>
                   </div>
+              </div>
+              <div class="col-md-6"> 
+                <div style="background-image: url('https://cdn-gnpmp.nitrocdn.com/zXfatNvCxdJLOJQwdBcjdAFpyWHclmaD/assets/images/optimized/rev-75d7a0a/www.code-brew.com/wp-content/uploads/2021/03/3b4889417bb5ae0f1b1e97c0f6ed721e.homeBanner.jpeg');height: 500px;">
+                  
+                </div>
               </div>
           </div>
       </div>
   </div>
 </div>
 
-
-<div class="home3-solution-section sec-mar">
-  <div class="container">
+<div class="home3-solution-section">
+  <div class="container-fluid">
       <div class="row mb-55 wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
           <div class="col-lg-12 d-flex align-items-center justify-content-between gap-4 flex-wrap">
               <div class="section-title-3">
@@ -338,7 +183,7 @@ Explore More
               </div>
               <div class="about-left">
                   <div class="about-img  wow animate fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
-                      <img class="img-fluid magnetic-item" src="{{ url('public/front/img/home-3/home3-about-1.png') }}" alt>
+                      <img class="img-fluid magnetic-item" src="{{ url('public/assets/img/home-3/home3-about-1.png') }}" alt>
                   </div>
                   <div class="about-content wow animate fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                       <h2>Unlock the potential of your business.</h2>
@@ -360,11 +205,11 @@ Explore More
           <div class="col-lg-3">
               <div class="about-right">
                   <div class="about-img wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                      <img class="img-fluid magnetic-item" src="{{ url('public/front/img/home-3/home3-about-2.png') }}" alt>
+                      <img class="img-fluid magnetic-item" src="{{ url('public/assets/img/home-3/home3-about-2.png') }}" alt>
                   </div>
                   <div class="about-exprience d-flex align-items-center justify-content-center wow animate fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
                       <div class="exp-text">
-                          <img src="{{ url('public/front/img/home-3/rotate-text.png') }}" alt>
+                          <img src="{{ url('public/assets/img/home-3/rotate-text.png') }}" alt>
                       </div>
                       <div class="years">
                           <h2>10<br><span>Years</span></h2>
@@ -399,7 +244,7 @@ Explore More
                       <div class="swiper-slide">
                           <div class="success-storie-card">
                               <div class="success-img">
-                                  <img class="img-fluid magnetic-item" src="{{ url('public/front/img/home-3/home3-suc-sto-01.png') }}" alt>
+                                  <img class="img-fluid magnetic-item" src="{{ url('public/assets/img/home-3/home3-suc-sto-01.png') }}" alt>
                               </div>
                               <div class="success-content">
                                   <span>Web development</span>
@@ -417,7 +262,7 @@ Explore More
                       <div class="swiper-slide">
                           <div class="success-storie-card">
                               <div class="success-img">
-                                  <img class="img-fluid magnetic-item" src="{{ url('public/front/img/home-3/home3-suc-sto-02.png') }}" alt>
+                                  <img class="img-fluid magnetic-item" src="{{ url('public/assets/img/home-3/home3-suc-sto-02.png') }}" alt>
                               </div>
                               <div class="success-content">
                                   <span>Web development</span>
@@ -435,7 +280,7 @@ Explore More
                       <div class="swiper-slide">
                           <div class="success-storie-card">
                               <div class="success-img">
-                                  <img class="img-fluid magnetic-item" src="{{ url('public/front/img/home-3/home3-suc-sto-03.png') }}" alt>
+                                  <img class="img-fluid magnetic-item" src="{{ url('public/assets/img/home-3/home3-suc-sto-03.png') }}" alt>
                               </div>
                               <div class="success-content">
                                   <span>Web development</span>
@@ -453,7 +298,7 @@ Explore More
                       <div class="swiper-slide">
                           <div class="success-storie-card">
                               <div class="success-img">
-                                  <img class="img-fluid magnetic-item" src="{{ url('public/front/img/home-3/home3-suc-sto-04.png') }}" alt>
+                                  <img class="img-fluid magnetic-item" src="{{ url('public/assets/img/home-3/home3-suc-sto-04.png') }}" alt>
                               </div>
                               <div class="success-content">
                                   <span>Web development</span>
@@ -471,7 +316,7 @@ Explore More
                       <div class="swiper-slide">
                           <div class="success-storie-card">
                               <div class="success-img">
-                                  <img class="img-fluid magnetic-item" src="{{ url('public/front/img/home-3/home3-suc-sto-05.png') }}" alt>
+                                  <img class="img-fluid magnetic-item" src="{{ url('public/assets/img/home-3/home3-suc-sto-05.png') }}" alt>
                               </div>
                               <div class="success-content">
                                   <span>Web development</span>
@@ -524,14 +369,14 @@ Explore More
                       <div class="swiper-slide">
                           <div class="testimonial-card3">
                               <div class="quate-icon">
-                                  <img src="{{ url('public/front/img/home-4/left-quote.svg') }}" alt>
+                                  <img src="{{ url('public/assets/img/home-4/left-quote.svg') }}" alt>
                               </div>
                               <div class="testimonial-top">
                                   <div class="review-left">
-                                      <img src="{{ url('public/front/img/home-4/trustpilot.svg') }}" alt>
+                                      <img src="{{ url('public/assets/img/home-4/trustpilot.svg') }}" alt>
                                   </div>
                                   <div class="review-right">
-                                      <img src="{{ url('public/front/img/home-4/trastpilot-star.svg') }}" alt>
+                                      <img src="{{ url('public/assets/img/home-4/trastpilot-star.svg') }}" alt>
                                   </div>
                               </div>
                               <div class="testimonial-content">
@@ -551,17 +396,17 @@ Explore More
                               </div>
                           </div>
                           <div class="author-img">
-                              <img src="{{ url('public/front/img/home-3/h3-testi-01.png') }}" alt>
+                              <img src="{{ url('public/assets/img/home-3/h3-testi-01.png') }}" alt>
                           </div>
                       </div>
                       <div class="swiper-slide">
                           <div class="testimonial-card3">
                               <div class="quate-icon">
-                                  <img src="{{ url('public/front/img/home-4/left-quote.svg') }}" alt>
+                                  <img src="{{ url('public/assets/img/home-4/left-quote.svg') }}" alt>
                               </div>
                               <div class="testimonial-top">
                                   <div class="review-left">
-                                      <img src="{{ url('public/front/img/home-4/google.svg') }}" alt>
+                                      <img src="{{ url('public/assets/img/home-4/google.svg') }}" alt>
                                   </div>
                                   <div class="review-right">
                                       <ul class="star">
@@ -590,20 +435,20 @@ Explore More
                               </div>
                           </div>
                           <div class="author-img">
-                              <img src="{{ url('public/front/img/home-3/h3-testi-02.png') }}" alt>
+                              <img src="{{ url('public/assets/img/home-3/h3-testi-02.png') }}" alt>
                           </div>
                       </div>
                       <div class="swiper-slide">
                           <div class="testimonial-card3">
                               <div class="quate-icon">
-                                  <img src="{{ url('public/front/img/home-4/left-quote.svg') }}" alt>
+                                  <img src="{{ url('public/assets/img/home-4/left-quote.svg') }}" alt>
                               </div>
                               <div class="testimonial-top">
                                   <div class="review-left">
-                                      <img src="{{ url('public/front/img/home-4/trustpilot.svg') }}" alt>
+                                      <img src="{{ url('public/assets/img/home-4/trustpilot.svg') }}" alt>
                                   </div>
                                   <div class="review-right">
-                                      <img src="{{ url('public/front/img/home-4/trastpilot-star.svg') }}" alt>
+                                      <img src="{{ url('public/assets/img/home-4/trastpilot-star.svg') }}" alt>
                                   </div>
                               </div>
                               <div class="testimonial-content">
@@ -623,7 +468,7 @@ Explore More
                               </div>
                           </div>
                           <div class="author-img">
-                              <img src="{{ url('public/front/img/home-3/h3-testi-03.png') }}" alt>
+                              <img src="{{ url('public/assets/img/home-3/h3-testi-03.png') }}" alt>
                           </div>
                       </div>
                   </div>
@@ -663,7 +508,7 @@ Explore More
                                           <h2><sup>$</sup>29<sub>/Month</sub></h2>
                                       </div>
                                       <div class="right">
-                                          <img src="{{ url('public/front/img/home-3/pricing-vec1.svg') }}" alt>
+                                          <img src="{{ url('public/assets/img/home-3/pricing-vec1.svg') }}" alt>
                                       </div>
                                   </div>
                                   <div class="pricing-content">
@@ -714,7 +559,7 @@ Explore More
                                       </div>
                                       <div class="right">
                                           <div class="offer-tag">
-                                              <img src="{{ url('public/front/img/home-3/price-bg.svg') }}" alt>
+                                              <img src="{{ url('public/assets/img/home-3/price-bg.svg') }}" alt>
                                               <h5>30% <br><span>Off</span></h5>
                                           </div>
                                       </div>
@@ -766,7 +611,7 @@ Explore More
                                           <h2><sup>$</sup>89<sub>/Month</sub></h2>
                                       </div>
                                       <div class="right">
-                                          <img src="{{ url('public/front/img/home-3/pricing-vec2.svg') }}" alt>
+                                          <img src="{{ url('public/assets/img/home-3/pricing-vec2.svg') }}" alt>
                                       </div>
                                   </div>
                                   <div class="pricing-content">
@@ -820,7 +665,7 @@ Explore More
                                           <h2><sup>$</sup>290<sub>/Year</sub></h2>
                                       </div>
                                       <div class="right">
-                                          <img src="{{ url('public/front/img/home-3/pricing-vec1.svg') }}" alt>
+                                          <img src="{{ url('public/assets/img/home-3/pricing-vec1.svg') }}" alt>
                                       </div>
                                   </div>
                                   <div class="pricing-content">
@@ -871,7 +716,7 @@ Explore More
                                       </div>
                                       <div class="right">
                                           <div class="offer-tag">
-                                              <img src="{{ url('public/front/img/home-3/price-bg.svg') }}" alt>
+                                              <img src="{{ url('public/assets/img/home-3/price-bg.svg') }}" alt>
                                               <h5>30% <br><span>Off</span></h5>
                                           </div>
                                       </div>
@@ -923,7 +768,7 @@ Explore More
                                           <h2><sup>$</sup>890<sub>/Year</sub></h2>
                                       </div>
                                       <div class="right">
-                                          <img src="{{ url('public/front/img/home-3/pricing-vec2.svg') }}" alt>
+                                          <img src="{{ url('public/assets/img/home-3/pricing-vec2.svg') }}" alt>
                                       </div>
                                   </div>
                                   <div class="pricing-content">
@@ -1009,7 +854,7 @@ Contact With Us.
           <div class="col-lg-3 col-sm-6 experts wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
               <div class="experts-card magnetic-item">
                   <div class="experts-img">
-                      <img class="img-fluid" src="{{ url('public/front/img/home-4/experts-01.png') }}" alt>
+                      <img class="img-fluid" src="{{ url('public/assets/img/home-4/experts-01.png') }}" alt>
                       <div class="expert-social">
                           <ul>
                               <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
@@ -1028,7 +873,7 @@ Contact With Us.
           <div class="col-lg-3 col-sm-6 experts wow animate fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
               <div class="experts-card magnetic-item">
                   <div class="experts-img">
-                      <img class="img-fluid" src="{{ url('public/front/img/home-4/experts-02.png') }}" alt>
+                      <img class="img-fluid" src="{{ url('public/assets/img/home-4/experts-02.png') }}" alt>
                       <div class="expert-social">
                           <ul>
                               <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
@@ -1047,7 +892,7 @@ Contact With Us.
           <div class="col-lg-3 col-sm-6 experts wow animate fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
               <div class="experts-card magnetic-item">
                   <div class="experts-img">
-                      <img class="img-fluid" src="{{ url('public/front/img/home-4/experts-03.png') }}" alt>
+                      <img class="img-fluid" src="{{ url('public/assets/img/home-4/experts-03.png') }}" alt>
                       <div class="expert-social">
                           <ul>
                               <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
@@ -1066,7 +911,7 @@ Contact With Us.
           <div class="col-lg-3 col-sm-6 experts wow animate fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
               <div class="experts-card magnetic-item">
                   <div class="experts-img">
-                      <img class="img-fluid" src="{{ url('public/front/img/home-4/experts-04.png') }}" alt>
+                      <img class="img-fluid" src="{{ url('public/assets/img/home-4/experts-04.png') }}" alt>
                       <div class="expert-social">
                           <ul>
                               <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
@@ -1101,7 +946,7 @@ Contact With Us.
           <div class="col-lg-4 col-md-6 wow animate fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
               <div class="single-blog magnetic-item">
                   <div class="blog-img">
-                      <img class="img-fluid" src="{{ url('public/front/img/home-3/home3-blog-01.png') }}" alt>
+                      <img class="img-fluid" src="{{ url('public/assets/img/home-3/home3-blog-01.png') }}" alt>
                       <div class="blog-tag">
                           <a href="blog.html">Web development</a>
                       </div>
@@ -1127,7 +972,7 @@ Contact With Us.
                                   <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
                                   <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
                               </ul>
-                              <span><img src="{{ url('public/front/img/home-3/plain-icon.svg') }}" alt></span>
+                              <span><img src="{{ url('public/assets/img/home-3/plain-icon.svg') }}" alt></span>
                           </div>
                       </div>
                   </div>
@@ -1136,7 +981,7 @@ Contact With Us.
           <div class="col-lg-4 col-md-6 wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
               <div class="single-blog magnetic-item">
                   <div class="blog-img">
-                      <img class="img-fluid" src="{{ url('public/front/img/home-3/home3-blog-02.png') }}" alt>
+                      <img class="img-fluid" src="{{ url('public/assets/img/home-3/home3-blog-02.png') }}" alt>
                       <div class="blog-tag">
                           <a href="blog.html">Cloud solutions</a>
                       </div>
@@ -1162,7 +1007,7 @@ Contact With Us.
                                   <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
                                   <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
                               </ul>
-                              <span><img src="{{ url('public/front/img/home-3/plain-icon.svg') }}" alt></span>
+                              <span><img src="{{ url('public/assets/img/home-3/plain-icon.svg') }}" alt></span>
                           </div>
                       </div>
                   </div>
@@ -1171,7 +1016,7 @@ Contact With Us.
           <div class="col-lg-4 col-md-6 wow animate fadeInRight" data-wow-delay="300ms" data-wow-duration="1500ms">
               <div class="single-blog magnetic-item">
                   <div class="blog-img">
-                      <img class="img-fluid" src="{{ url('public/front/img/home-3/home3-blog-03.png') }}" alt>
+                      <img class="img-fluid" src="{{ url('public/assets/img/home-3/home3-blog-03.png') }}" alt>
                       <div class="blog-tag">
                           <a href="blog.html">Web development</a>
                       </div>
@@ -1197,7 +1042,7 @@ Contact With Us.
                                   <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
                                   <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
                               </ul>
-                              <span><img src="{{ url('public/front/img/home-3/plain-icon.svg') }}" alt></span>
+                              <span><img src="{{ url('public/assets/img/home-3/plain-icon.svg') }}" alt></span>
                           </div>
                       </div>
                   </div>
