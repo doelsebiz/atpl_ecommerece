@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   	@yield('tittle')
 </head>
-	<body class="body-five">
+	<body class="home-dark2 tt-magic-cursor">
 		@include('frontend.includes.header')
 			@yield('content')
 		@include('frontend.includes.footer')
