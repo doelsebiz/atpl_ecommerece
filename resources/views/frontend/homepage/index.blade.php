@@ -288,7 +288,7 @@
                      </div>
                      <div class="services-content">
                         <div class="title-category">
-                           <h3>UI/UX Design Services</h3>
+                           <h3>UI/UX Design</h3>
                         </div>
                         <p>Health and care consulting refers to the practice of providing expert.</p>
                         <ul>
