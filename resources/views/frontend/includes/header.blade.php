@@ -18,14 +18,14 @@
    </div> -->
 <header class="header-area2 one">
    <div class="header-logo">
-      <a href="index.html">
+      <a href="{{ url('') }}">
          <h1 style="color: white;margin-bottom: 0px;">ATPL</h1>
       </a>
    </div>
    <div class="main-menu">
       <div class="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
          <div class="mobile-logo-wrap">
-            <a href="index.html">
+            <a href="{{ url('') }}">
                <h1 style="color: white;margin-bottom: 0px;">ATPL</h1>
             </a>
          </div>

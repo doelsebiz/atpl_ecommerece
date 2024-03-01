@@ -55,9 +55,9 @@ Route::get('/requests', [HomeController::class, 'requests'])->name('requests');
 
 Route::get('/getstates/{id}', [SiteController::class, 'getstates']);
 
-Route::get('/security-settings', [SiteController::class, 'securitysettings']);
-Route::get('/policydetail/{id}', [HomeController::class, 'policydetail']);
-Route::POST('changerequest', [HomeController::class, 'changerequest']);
+Route::get('/ecommerece-app', [SiteController::class, 'ecommereceapp']);
+Route::get('/taxi-app', [SiteController::class, 'taxiapp']);
+Route::get('education-app', [SiteController::class, 'educationapp']);
 Route::POST('refundrequests', [HomeController::class, 'refundrequests']);
 Route::POST('extendpolicy', [HomeController::class, 'extendpolicy']);
 Route::get('/udashboard', [SiteController::class, 'udashboard']);

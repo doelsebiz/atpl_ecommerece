@@ -39,24 +39,19 @@ class SiteController extends Controller
 {
     public function index()
     {
-        // $twilio = new Client(env('TWILIO_ACCOUNT_SID'), env('TWILIO_AUTH_TOKEN'));
-        // $test = $twilio->messages->create(
-        //     "whatsapp:+923491162005", [
-        //         "from" => "whatsapp:+18555005041",
-        //         "body" => "Here's your invoice!",
-        //         "mediaUrl" => "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-        //     ]
-        // );
-        // print_r($test);exit;
         return view('frontend.homepage.index');
     }
-    public function getstates($id)
+    public function ecommereceapp()
     {
-        $data = DB::table('states')->where('country_id' , $id)->get();
-        echo '<option value="">Select State in '.DB::table('countries')->where('id' , $id)->first()->name.'</option>';
-        foreach ($data as $r) {
-            echo '<option value="'.$r->name.'">'.$r->name.'</option>';
-        }
+        return view('frontend.apps.ecommerece');
+    }
+    public function taxiapp()
+    {
+        return view('frontend.apps.taxiapp');
+    }
+    public function educationapp()
+    {
+        return view('frontend.apps.educationapp');
     }
     public function checkadditionaltravelers(Request $request)
     {
