@@ -31,7 +31,8 @@
          </div>
       </div>
       <ul class="menu-list">
-         <li><a href="{{ url('') }}">Services</a></li>
+         <li><a href="{{ url('') }}">Home</a></li>
+         <li><a href="{{ url('our-services') }}">Services</a></li>
          <li class="menu-item-has-children">
             <a href="#" class="drop-down">Industry</a><i class="bi bi-plus dropdown-icon"></i>
             <ul class="sub-menu">
