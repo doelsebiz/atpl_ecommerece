@@ -741,7 +741,7 @@ class SiteController extends Controller
     }
     public function aboutus()
     {
-        return view('frontend.companypages.about');
+        return view('frontend.pages.about');
     }
     public function blogs()
     {

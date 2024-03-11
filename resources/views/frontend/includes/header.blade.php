@@ -43,14 +43,14 @@
                <li><a href="{{ url('laundry-app') }}">Laundry App</a></li>
             </ul>
          </li>
-         <li class="menu-item-has-children">
+         <!-- <li class="menu-item-has-children">
             <a href="#" class="drop-down">Business Models</a><i class="bi bi-plus dropdown-icon"></i>
             <ul class="sub-menu">
                <li><a href="project.html">Project</a></li>
                <li><a href="project-masonary.html">Project Masonry</a></li>
                <li><a href="project-details.html">Project Details</a></li>
             </ul>
-         </li>
+         </li> -->
          <li><a href="{{ url('portfolio') }}">Portfolio</a></li>
          <li class="menu-item-has-children">
             <a href="#" class="drop-down">Company</a><i class="bi bi-plus dropdown-icon"></i>
