@@ -33,15 +33,91 @@
       <ul class="menu-list">
          <li><a href="{{ url('') }}">Home</a></li>
          <li><a href="{{ url('our-services') }}">Services</a></li>
-         <li class="menu-item-has-children">
-            <a href="#" class="drop-down">Industry</a><i class="bi bi-plus dropdown-icon"></i>
-            <ul class="sub-menu">
-               <li><a href="{{ url('ecommerece-app') }}">Ecommerece App</a></li>
-               <li><a href="{{ url('taxi-app') }}">Taxi App</a></li>
-               <li><a href="{{ url('education-app') }}">Education App</a></li>
-               <li><a href="{{ url('pharmacy-app') }}">Pharmacy App</a></li>
-               <li><a href="{{ url('fitness-app') }}">Fitness App</a></li>
-               <li><a href="{{ url('laundry-app') }}">Laundry App</a></li>
+         <li class="menu-item-has-children" style="position: unset;">
+            <a href="javascript::void(0)" class="drop-down">Industry</a><i class="bi bi-plus dropdown-icon"></i>
+            <ul class="sub-menu megamenue">
+               <div  class="d-flex">
+                  <li class="d-flex">
+                     <span class="material-symbols-outlined">shopping_cart</span>
+                     <a href="{{ url('ecommerece-app') }}">Ecommerece App</a>
+                  </li>
+                  <li class="d-flex">
+                     <span class="material-symbols-outlined">local_taxi</span>
+                     <a href="{{ url('taxi-app') }}">Taxi App</a>
+                  </li>
+                  <li class="d-flex">
+                     <span class="material-symbols-outlined">school</span>
+                     <a href="{{ url('education-app') }}">Education App</a>
+                  </li>
+                  <li class="d-flex">
+                     <span class="material-symbols-outlined">local_pharmacy</span>
+                     <a href="{{ url('pharmacy-app') }}">Pharmacy App</a>
+                  </li>
+                  <li class="d-flex">
+                     <span class="material-symbols-outlined">fitness_center</span>
+                     <a href="{{ url('fitness-app') }}">Fitness App</a>
+                  </li>
+               </div>
+               <div  class="d-flex">
+                  <li class="d-flex">
+                     <span class="material-symbols-outlined">local_shipping</span>
+                     <a href="{{ url('ecommerece-app') }}">Food Delivery</a>
+                  </li>
+                  <li class="d-flex">
+                     <span class="material-symbols-outlined">health_and_beauty</span>
+                     <a href="{{ url('taxi-app') }}">Beauty Saloon</a>
+                  </li>
+                  <li class="d-flex">
+                     <span class="material-symbols-outlined">car_rental</span>
+                     <a href="{{ url('education-app') }}">Rental</a>
+                  </li>
+                  <li class="d-flex">
+                     <span class="material-symbols-outlined">handshake</span>
+                     <a href="{{ url('pharmacy-app') }}">Consultation App</a>
+                  </li>
+                  <li class="d-flex">
+                     <span class="material-symbols-outlined">apartment</span>
+                     <a href="{{ url('taxi-app') }}">Real Estate</a>
+                  </li>
+               </div>
+               <div  class="d-flex">
+                  <li class="d-flex">
+                     <span class="material-symbols-outlined">home_repair_service</span>
+                     <a href="{{ url('ecommerece-app') }}">Home Service</a>
+                  </li>
+                  <li class="d-flex">
+                     <span class="material-symbols-outlined">health_and_safety</span>
+                     <a href="{{ url('taxi-app') }}">HealthCare</a>
+                  </li>
+                  <li class="d-flex">
+                     <span class="material-symbols-outlined">trending_up</span>
+                     <a href="{{ url('education-app') }}">Freelancer App</a>
+                  </li>
+                  <li class="d-flex">
+                     <span class="material-symbols-outlined">public</span>
+                     <a href="{{ url('pharmacy-app') }}">Social Media App</a>
+                  </li>
+                  <li class="d-flex">
+                     <span class="material-symbols-outlined">laundry</span>
+                     <a href="{{ url('fitness-app') }}">Laundry App</a>
+                  </li>
+               </div>
+               <div  class="d-flex">
+                  <li class="d-flex">
+                     <span class="material-symbols-outlined">favorite</span>
+                     <a href="{{ url('ecommerece-app') }}">Datting App</a>
+                  </li>
+                  
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+               </div>
+               <div class="menueunderline">
+                     <div style="width:100%;text-align: center;">
+                        <mark class="sale">Click to On Demand Applications</mark>
+                     </div>
+               </div>
             </ul>
          </li>
          <!-- <li class="menu-item-has-children">
@@ -100,7 +176,7 @@
    </div>
    <div class="nav-right d-flex jsutify-content-end align-items-center">
       <div class="sidebar-btn2">
-         <a class="primary-btn3 d-flex" href="javascript:void(0)"><span class="material-symbols-outlined">call</span> Schedule a Call</a>
+         <a class="primary-btn3 d-flex" href="javascript:void(0)">Get In Tocuh</a>
       </div>
       <div class="sidebar-button mobile-menu-btn">
          <span></span>
