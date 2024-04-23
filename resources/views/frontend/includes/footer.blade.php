@@ -27,12 +27,6 @@
                 <div class="footer-widget">
                     <div class="footer-contact mb-40">
                         <h4>
-                            <span class="material-symbols-outlined">location_on</span> Address
-                        </h4>
-                        <a href="#">House 168/170, Avenue 01, Mirpur DOHS, Dhaka Bangladesh</a>
-                    </div>
-                    <div class="footer-contact mb-40">
-                        <h4>
                             <span class="material-symbols-outlined">mail</span> Email
                         </h4>
                         <a href=""><span>info@aweentechnologies.com</span></a><br>
@@ -53,11 +47,8 @@
                     <div class="menu-container">
                         <ul>
                             <li><a href="service.html">Web Development</a></li>
-                            <li><a href="service.html">Mobile Development</a></li>
-                            <li><a href="service.html">Cloud Services</a></li>
-                            <li><a href="service.html">Network Connectivity</a></li>
-                            <li><a href="service.html">Data analytics</a></li>
-                            <li><a href="service.html">Software Development</a></li>
+                            <li><a href="service.html">App Development</a></li>
+                            <li><a href="service.html">UI/UX Design</a></li>
                         </ul>
                     </div>
                 </div>
@@ -70,11 +61,8 @@
                     <div class="menu-container">
                         <ul>
                             <li><a href="about.html">About Us</a></li>
-                            <li><a href="case-study.html">Case Study</a></li>
-                            <li><a href="blog.html">News & Article</a></li>
                             <li><a href="team1.html">Our Team</a></li>
-                            <li><a href="project.html">All Portfolio</a></li>
-                            <li><a href="pricing.html">Pricing Plan</a></li>
+                            <li><a href="team1.html">FAQs</a></li>
                         </ul>
                     </div>
                 </div>
@@ -86,12 +74,9 @@
                     </div>
                     <div class="menu-container">
                         <ul>
-                            <li><a href="#">Support Area</a></li>
-                            <li><a href="#">Support Policy</a></li>
                             <li><a href="#">Terms & Conditions</a></li>
                             <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Career</a></li>
-                            <li><a href="pricing.html">Pricing Plan</a></li>
+                            <li><a href="#">Purchase Code Policy</a></li>
                         </ul>
                     </div>
                 </div>

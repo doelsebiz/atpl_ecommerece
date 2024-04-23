@@ -4,25 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Helpers\Cmf;
 use Illuminate\Http\Request;
-use App\Models\companies;
-use App\Models\jobs;
 use App\Models\User;
-use App\Models\jobsubmissionsrequests;
-use App\Models\linktemplatewithjobs;
-use App\Models\maplocations;
-use App\Models\wp_dh_products;
-use App\Models\wp_dh_insurance_plans;
-use App\Models\wp_dh_insurance_plans_rates;
 use App\Models\blogs;
-use App\Models\sales;
-use App\Models\sales_cards;
-use App\Models\temproary_sales;
-use App\Models\traveler_sale_informations;
 use App\Models\blogcategories;
 use App\Models\contactus_messages;
-use App\Models\compare_plans;
 use App\Models\newsletter;
-use App\Models\temproaryquote;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
@@ -53,518 +39,69 @@ class SiteController extends Controller
     {
         return view('frontend.apps.educationapp');
     }
-    public function checkadditionaltravelers(Request $request)
+    public function dattingapp()
     {
-        foreach ($request->ages as $r) {
-            echo $r;
-        }
+        return view('frontend.apps.dattingapp');
     }
-    public function savecompareplans(Request $request)
+    public function ourservices()
     {
-        $data = unserialize($request->savetoplan);
-        $check = DB::table('compare_plans')->where('comparenumber', $request->rand)->where('plan_id', $data['plan_id'])->where('product_id', $data['pro_id'])->where('coverage_ammount', $data['sum_insured'])->where('deductibles', $data['deductible'])->where('price', $data['total_price']);
-
-        if ($check->count() > 0) {
-            $check->delete();
-        } else {
-            $compare = new compare_plans();
-            $compare->savetoplan = $request->savetoplan;
-            $compare->comparenumber = $request->rand;
-            $compare->plan_id = $data['plan_id'];
-            $compare->product_id = $data['pro_id'];
-            $compare->coverage_ammount = $data['sum_insured'];
-            $compare->deductibles = $data['deductible'];
-            $compare->price = $data['total_price'];
-            $compare->save();
-        }
-        $data = DB::table('compare_plans')->where('comparenumber', $request->rand)->get();
-
-        if($data->count()){
-            echo '<div class="container">
-            <i onclick="removecomparecard()" style="right: 31px;
-    background-color: #67778f;
-    border-radius: 50%;" class="icon icon-remove-card"></i>
-            <div class="d-flex showcomparediv">';
-    foreach ($data as $r) {
-
-
-        $unserialize = unserialize($r->savetoplan);
-
-        $plan = DB::table('wp_dh_insurance_plans')->where('id', $unserialize['plan_id'])->first();
-
-
-        if ($plan->plan_name) {
-            $words = explode(" ", $plan->plan_name);
-            $acronym = "";
-            foreach ($words as $w) {
-                $acronym .= mb_substr($w, 0, 1);
-            }
-
-            $planname = $acronym;
-        } else {
-            $planname = 'PL';
-        }
-
-        echo '<div class="card-plan-compare">
-                                <span  class="card-plan-compare-title">
-                                    <span  class="card-plan-compare-title-full">';
-        if ($plan->plan_name) {
-            echo $plan->plan_name;
-        } else {
-            echo 'Plan ' . $data->count();
-        }
-        echo '</span>
-                                    <span class="card-plan-compare-title-abbr">' . $planname . '</span>
-                                </span>
-                                <i onclick="removecomarecard(' . $r->id . ')" class="icon icon-remove-card"></i>
-                            </div>';
+        return view('frontend.services.index');
     }
-    echo '<p class="text-secondary-color compare-bar__count"><span>' . $data->count() . '</span>/3 Selected</p>';
-    if ($data->count() > 1) {
-        echo '<a target="_blank" class="button button-primary get-quotes-button" style="color:white;" href="' . url('compareplans') . '/' . $request->rand . '">Compare</a>';
-    } else {
-        echo '<a class="button button-default get-quotes-button" style="color:white;" href="javascript:void(0)" disabled>Compare</a>';
-    }
-
-    echo '</div>  
-        </div>';
-        }
-
-
-       
-    }
-    public function removecomarecard($id)
+    public function pharmacyapp()
     {
-        $compare_plans = DB::table('compare_plans')->where('id', $id)->first();
-        DB::table('compare_plans')->where('id', $id)->delete();
-        $data = DB::table('compare_plans')->where('comparenumber', $compare_plans->comparenumber)->get();
-
-        if ($data->count() > 0) {
-            echo '<div class="container">
-            <div class="d-flex showcomparediv">';
-            foreach ($data as $r) {
-                $plan = DB::table('wp_dh_insurance_plans')->where('id', $r->plan_id)->first();
-
-                echo '<div class="card-plan-compare">
-                                <span  class="card-plan-compare-title">
-                                    <span  class="card-plan-compare-title-full">';
-                if ($plan->plan_name) {
-                    echo $plan->plan_name;
-                } else {
-                    echo 'Plan ' . $data->count();
-                }
-                echo '</span>
-                                </span>
-                                <i onclick="removecomarecard(' . $r->id . ')" class="icon icon-remove-card"></i>
-                            </div>';
-            }
-            echo '<p class="text-secondary-color compare-bar__count"><span>' . $data->count() . '</span>/3 Selected</p>';
-            if ($data->count() > 1) {
-                echo '<a target="_blank" class="button button-primary get-quotes-button" style="color:white;" href="' . url('compareplans') . '/' . $compare_plans->comparenumber . '">Compare</a>';
-            } else {
-                echo '<a class="button button-default get-quotes-button" style="color:white;" href="javascript:void(0)" disabled>Compare</a>';
-            }
-
-            echo '</div>  
-        </div>';
-        }
+        return view('frontend.apps.pharmacyapp');
     }
-    public function sendcompareemail(Request $request)
+    public function fitnessapp()
     {
-        $validator = Validator::make($request->all(), [
-            'email' => 'required|email'
-        ]);
-        if ($validator->fails()) {
-            return response()->json(['error'=>$validator->errors()->all()]);
-        }
-        $subject = 'Your Saved Plan Comparison';
-        Mail::send('email.template1.compare', ['compareid' => $request->compareid], function ($message) use ($request, $subject) {
-            $message->to($request->email);
-            $message->subject($subject);
-        });
-        return redirect()->back()->with('message', 'success');
+        return view('frontend.apps.fitnessapp');
     }
-    public function getquote($id)
+    public function fooddeliveryapp()
     {
-        $val = temproaryquote::where('quote_id', $id)->first();
-        $quotedata =  json_decode($val->data, true);
-        return view('frontend.formone.getquote')->with(array('quotedata' => $quotedata, 'id' => $id, 'val' => $val));
+        return view('frontend.apps.fooddeliveryapp');
     }
-    public function ajaxquotes(Request $request)
+    public function beautysaloonapp()
     {
-        $rules = array(
-            'departure_date' => 'required',
-            'return_date' => 'required',
-            'savers_email' => 'required|email'
-        );    
-        $messages = array(
-                        'departure_date.required' => 'Start Date of Coverage Is Required',
-                        'return_date.required' => 'End Date of Coverage Is Required',
-                        'savers_email.required' => 'Please Enter Valid Email'
-                    );
-        $validator = Validator::make( $request->all(), $rules, $messages );
-        if ($validator->fails()) {
-            return response()->json(['error'=>$validator->errors()->all()]);
-        }
-        $quoteNumber = rand();
-        $data = wp_dh_products::where('pro_id', $request->product_id)->first();
-        $fields = unserialize($data->pro_fields);
-        $plan = DB::table('wp_dh_insurance_plans', $data->pro_id)->first();
-        $ded = DB::table('wp_dh_insurance_plans_deductibles')->where('plan_id', $plan->id)->groupby('deductible1')->get();
-        $query = "CAST(`sum_insured` AS DECIMAL)";
-        $sum = DB::table('wp_dh_insurance_plans_rates')->where('plan_id', $plan->id)->groupby('sum_insured')->orderByRaw($query)->get();
-        if ($data->stylish_price_layout == 'layout_1') {
-            $returnHTML =  view('frontend.travelinsurance.includes.one.index')->with(array('quoteNumber' => $quoteNumber, 'data' => $data, 'fields' => $fields, 'ded' => $ded, 'sum' => $sum, 'request' => $request))->render();
-        }
-        if ($data->stylish_price_layout == 'layout_2') {
-            $returnHTML =  view('frontend.travelinsurance.includes.two.index')->with(array('quoteNumber' => $quoteNumber, 'data' => $data, 'fields' => $fields, 'ded' => $ded, 'sum' => $sum, 'request' => $request))->render();
-        }
-        if ($data->stylish_price_layout == 'layout_3') {
-            $returnHTML =  view('frontend.travelinsurance.includes.three.index')->with(array('quoteNumber' => $quoteNumber, 'data' => $data, 'fields' => $fields, 'ded' => $ded, 'sum' => $sum, 'request' => $request))->render();
-        }
-        if ($data->stylish_price_layout == 'layout_4') {
-            $returnHTML =  view('frontend.travelinsurance.includes.four.index')->with(array('quoteNumber' => $quoteNumber, 'data' => $data, 'fields' => $fields, 'ded' => $ded, 'sum' => $sum, 'request' => $request))->render();
-        }
-        if ($data->stylish_price_layout == 'layout_5') {
-            $returnHTML =  view('frontend.travelinsurance.includes.five.index')->with(array('quoteNumber' => $quoteNumber, 'data' => $data, 'fields' => $fields, 'ded' => $ded, 'sum' => $sum, 'request' => $request))->render();
-        }
-        if ($data->stylish_price_layout == 'layout_6') {
-            $returnHTML =  view('frontend.travelinsurance.includes.six.index')->with(array('quoteNumber' => $quoteNumber, 'data' => $data, 'fields' => $fields, 'ded' => $ded, 'sum' => $sum, 'request' => $request))->render();
-        }
-        if ($data->stylish_price_layout == 'layout_7') {
-            $returnHTML =  view('frontend.travelinsurance.includes.seven.index')->with(array('quoteNumber' => $quoteNumber, 'data' => $data, 'fields' => $fields, 'ded' => $ded, 'sum' => $sum, 'request' => $request))->render();
-        }
-        if ($data->stylish_price_layout == 'layout_8') {
-            $returnHTML =  view('frontend.travelinsurance.includes.eight.index')->with(array('quoteNumber' => $quoteNumber, 'data' => $data, 'fields' => $fields, 'ded' => $ded, 'sum' => $sum, 'request' => $request))->render();
-        }
-        if ($data->stylish_price_layout == 'layout_9') {
-            $returnHTML =  view('frontend.travelinsurance.includes.nine.index')->with(array('quoteNumber' => $quoteNumber, 'data' => $data, 'fields' => $fields, 'ded' => $ded, 'sum' => $sum, 'request' => $request))->render();
-        }
-        if ($data->stylish_price_layout == 'layout_10') {
-            $returnHTML =  view('frontend.travelinsurance.includes.ten.index')->with(array('quoteNumber' => $quoteNumber, 'data' => $data, 'fields' => $fields, 'ded' => $ded, 'sum' => $sum, 'request' => $request))->render();
-        }
-        if (isset($request->sendemail)) {
-            if ($request->sendemail == 'yes') {
-                $data = json_encode($request->all(), true);
-                $quotesave = new temproaryquote();
-                $quotesave->quote_id = $quoteNumber;
-                $quotesave->data = $data;
-                $quotesave->type = 'ajax';
-                $quotesave->save();
-            }
-        }
-        return response()->json(array('success' => true, 'html' => $returnHTML));
+        return view('frontend.apps.beautysaloonapp');
     }
-    public function confermquote()
+    public function consultationapp()
     {
-        return view('frontend.formone.conferm');
+        return view('frontend.apps.consultationapp');
     }
-    
-    public function applyqoute(Request $request)
+    public function realestateapp()
     {
-        if ($request->product_id == 1) {
-            $policytype = 'SVI';
-        } else if ($request->product_id == 2) {
-            $policytype = 'VTC';
-        } else if ($request->product_id == 3) {
-            $policytype = 'SI';
-        } else if ($request->product_id == 4) {
-            $policytype = 'IFC';
-        } else if ($request->product_id == 5) {
-            $policytype = 'ST';
-        } else if ($request->product_id == 6) {
-            $policytype = 'MT';
-        } else if ($request->product_id == 7) {
-            $policytype = 'AI';
-        } else if ($request->product_id == 8) {
-            $policytype = 'TII';
-        } else if ($request->product_id == 9) {
-            $policytype = 'BC';
-        } else {
-            $policytype = '';
-        }
-        $policy_number_temp = rand(10000, 50000);
-        $reffrence_number = $policytype . $policy_number_temp;
-
-        $newsale = new sales();
-        $newsale->reffrence_number = $reffrence_number;
-        $newsale->website = 'lifeadvice';
-        $newsale->sponsersname = $request->sponsersname;
-        $newsale->sponsersemail = $request->sponsersemail;
-        $newsale->email = $request->email;
-        $newsale->phonenumber = $request->phone;
-        $newsale->address = $request->streetname;
-        $newsale->appartment = $request->suit;
-        $newsale->city = $request->city;
-        $newsale->province = $request->province;
-        $newsale->postalcode = $request->postalcode;
-        $newsale->country = $request->country;
-        $newsale->product_name = $request->producttype;
-        $newsale->product_id = $request->product_id;
-        $newsale->start_date = $request->tripdate;
-        $newsale->end_date = $request->tripend;
-        $newsale->primary_destination = $request->visitor_visa_type;
-        $newsale->duration = $request->tripduration;
-        $newsale->premium = $request->premium;
-        $newsale->coverage_ammount = $request->coverage_ammount;
-        $newsale->deductibles = $request->deductibles;
-        $newsale->deductible_rate = $request->deductible_rate;
-        $newsale->company_name = $request->comp_name;
-        $newsale->comp_id = $request->comp_id;
-        $newsale->plan_id = $request->plan_id;
-        $newsale->status = 'Pending';
-        $newsale->newstatus = 'new';
-        $newsale->save();
-
-
-
-        foreach ($request->dob as $key => $value) {
-            $traveler = new traveler_sale_informations();
-            $traveler->sale_id = $newsale->id;
-            $traveler->f_name = $request->fname[$key];
-            $traveler->l_name = $request->lname[$key];
-            $traveler->gender = $request->gender[$key];
-            $traveler->pre_existing_condition = $request->preexisting[$key];
-            $traveler->date_of_birth = $value;
-            $traveler->save();
-        }
-
-
-
-
-
-
-
-        $card_expiry = explode('/', $request->expirationdate);
-        $card_month = $card_expiry[0];
-        $card_year = $card_expiry[1];
-
-        $salecard = new sales_cards();
-        $salecard->sale_id = $newsale->id;
-        $salecard->card_name = $request->cardholdername;
-        $salecard->card_number = $request->cardholdernumber;
-        $salecard->card_month = $card_month;
-        $salecard->card_year = $card_year;
-        $salecard->card_cvc = $request->cvc;
-        $salecard->save();
-        $checkuser = User::where('email', $request->email)->count();
-        if ($checkuser == 0) {
-            $password = $reffrence_number;
-            $newuser = new User();
-            $newuser->email = $request->email;
-            $newuser->phone = $request->phone;
-            $newuser->address = $request->streetname;
-            $newuser->password = Hash::make($password);
-            $newuser->user_type = 'customer';
-            $newuser->status = 'active';
-            $newuser->save();
-        }
-
-        $subject = 'Your Life Advice Policy Confirmation | ' . $reffrence_number;
-        $temp = DB::table('site_settings')->where('smallname', 'lifeadvice')->first()->email_template;
-        $purchasepolicyemailview = 'email.template' . $temp . '.purchasepolicy';
-        $reviewemailview = 'email.template' . $temp . '.review';
-        Mail::send($purchasepolicyemailview, ['request' => $request, 'sale' => $newsale, 'policy_number' => $reffrence_number], function ($message) use ($request, $subject) {
-            $message->to($request->email);
-            $message->subject($subject);
-        });
-        Mail::send($reviewemailview, ['request' => $request, 'sale' => $newsale], function ($message) use ($request, $subject) {
-            $message->to($request->email);
-            $message->subject('Tell Us How We Did?');
-        });
-        $subject = 'New Sale | Reffrence Number =  ' . $reffrence_number;
-        Mail::send($purchasepolicyemailview, ['request' => $request, 'sale' => $newsale, 'policy_number' => $reffrence_number], function ($message) use ($request, $subject) {
-            $message->to('admin@lifeadvice.ca');
-            $message->subject($subject);
-        });
-        return view('frontend.formone.conferm')->with(array('request' => $request));
+        return view('frontend.apps.realestateapp');
     }
-    public function applyplan(Request $request)
+    public function homeserviceapp()
     {
-        $temp = DB::table('site_settings')->where('smallname', 'lifeadvice')->first()->buynow_form;
-        if($temp == 2)
-        {   
-            if(temproary_sales::where('temp_id' , $request->temproary_sale)->count() == 0)
-            {
-                $sale = new temproary_sales();
-                $sale->formdata = serialize($request->all());
-                $sale->temp_id= $request->temproary_sale;
-                $sale->website= 'lifeadvice';
-                $sale->step= 1;
-                $sale->save();
-                $url = url('step-one').'/'.$request->temproary_sale;
-                return Redirect::to($url);
-            }else
-            {
-                $tempr = temproary_sales::where('temp_id' , $request->temproary_sale)->first();
-                $sale = temproary_sales::find($tempr->id);
-                $sale->formdata = serialize($request->all());
-                $sale->temp_id= $request->temproary_sale;
-                $sale->website= 'lifeadvice';    
-                $sale->step= 1;
-                $sale->save();
-                $url = url('step-one').'/'.$request->temproary_sale;
-                return Redirect::to($url);
-            }
-        }
-        if($temp == 1)
-        {
-            return view('frontend.apply.templateone')->with(array('request' => $request));
-        }
+        return view('frontend.apps.homeserviceapp');
     }
-    public function completeandpurchase(Request $request)
+    public function healthcareapp()
     {
-        $temp = temproary_sales::where('temp_id' , $request->temp_id)->first();
-        $quotedata = unserialize($temp->formdata);
-        $stepone = unserialize($temp->steponedata);
-        $steptwo = unserialize($temp->steptwodata);
-        if ($quotedata['product_id'] == 1) {
-            $policytype = 'SVI';
-        } else if ($quotedata['product_id'] == 2) {
-            $policytype = 'VTC';
-        } else if ($quotedata['product_id'] == 3) {
-            $policytype = 'SI';
-        } else if ($quotedata['product_id'] == 4) {
-            $policytype = 'IFC';
-        } else if ($quotedata['product_id'] == 5) {
-            $policytype = 'ST';
-        } else if ($quotedata['product_id'] == 6) {
-            $policytype = 'MT';
-        } else if ($quotedata['product_id'] == 7) {
-            $policytype = 'AI';
-        } else if ($quotedata['product_id'] == 8) {
-            $policytype = 'TII';
-        } else if ($quotedata['product_id'] == 9) {
-            $policytype = 'BC';
-        } else {
-            $policytype = '';
-        }
-        $policy_number_temp = rand(10000, 50000);
-        $reffrence_number = $policytype . $policy_number_temp;
-        $newsale = new sales();
-        $newsale->reffrence_number = $reffrence_number;
-        $newsale->website = 'lifeadvice';
-        $newsale->sponsersname = $steptwo['sponsersname'];
-        $newsale->sponsersemail = $steptwo['sponsersemail'];
-        $newsale->email = $stepone['email'];
-        $newsale->phonenumber = $steptwo['phone'];
-        $newsale->address = $steptwo['streetname'];
-        $newsale->appartment = $steptwo['suit'];
-        $newsale->city = $steptwo['city'];
-        $newsale->province = $steptwo['province'];
-        $newsale->postalcode = $steptwo['postalcode'];
-        $newsale->country = $steptwo['country'];
-        $newsale->product_name = $quotedata['product_name'];
-        $newsale->product_id = $quotedata['product_id'];
-        $newsale->start_date = $quotedata['tripdate'];
-        $newsale->end_date = $quotedata['tripend'];
-        $newsale->primary_destination = $quotedata['destination'];
-        $newsale->duration = $quotedata['tripduration'];
-        $newsale->premium = $quotedata['tripduration'];
-        $newsale->coverage_ammount = $quotedata['coverage'];
-        $newsale->deductibles = $quotedata['deductibles'];
-        $newsale->deductible_rate = $quotedata['deductible_rate'];
-        $newsale->company_name = $quotedata['companyName'];
-        $newsale->comp_id = $quotedata['comp_id'];
-        $newsale->plan_id = $quotedata['plan_id'];
-        $newsale->status = 'Pending';
-        $newsale->newstatus = 'new';
-        $newsale->save();
-
-
-
-        for($i=0; $i < $quotedata['traveller']; $i++) {
-            $year = $quotedata['years'][$i];
-            $preexisting = $quotedata['preexisting'][$i];
-            $traveler = new traveler_sale_informations();
-            $traveler->sale_id = $newsale->id;
-            $traveler->f_name = $stepone['fname'][$i];
-            $traveler->l_name = $stepone['lname'][$i];
-            $traveler->gender = $stepone['gender'][$i];
-            $traveler->pre_existing_condition = $preexisting;
-            $traveler->date_of_birth = Cmf::date_format($year);
-            $traveler->save();
-        }
-
-
-        $card_expiry = explode('/', $request->expirationdate);
-        $card_month = $card_expiry[0];
-        $card_year = $card_expiry[1];
-
-        $salecard = new sales_cards();
-        $salecard->sale_id = $newsale->id;
-        $salecard->card_name = $request->cardholdername;
-        $salecard->card_number = $request->cardholdernumber;
-        $salecard->card_month = $card_month;
-        $salecard->card_year = $card_year;
-        $salecard->card_cvc = $request->cvc;
-        $salecard->save();
-
-
-        $checkuser = User::where('email', $stepone['email'])->count();
-        if ($checkuser == 0) {
-            $password = $reffrence_number;
-            $newuser = new User();
-            $newuser->email = $stepone['email'];
-            $newuser->phone = $steptwo['phone'];
-            $newuser->address = $steptwo['streetname'];
-            $newuser->password = Hash::make($password);
-            $newuser->user_type = 'customer';
-            $newuser->status = 'active';
-            $newuser->save();
-        }
-
-        $subject = 'Your Life Advice Policy Confirmation | ' . $reffrence_number;
-        $temp = DB::table('site_settings')->where('smallname', 'lifeadvice')->first()->email_template;
-        $purchasepolicyemailview = 'email.template' . $temp . '.purchasepolicy';
-        $reviewemailview = 'email.template' . $temp . '.review';
-        Mail::send($purchasepolicyemailview, ['request' => $request, 'sale' => $newsale, 'policy_number' => $reffrence_number], function ($message) use ($newsale, $subject) {
-            $message->to($newsale->email);
-            $message->subject($subject);
-        });
-        Mail::send($reviewemailview, ['request' => $request, 'sale' => $newsale], function ($message) use ($newsale, $subject) {
-            $message->to($newsale->email);
-            $message->subject('Tell Us How We Did?');
-        });
-        $subject = 'New Sale | Reffrence Number =  ' . $reffrence_number;
-        Mail::send($purchasepolicyemailview, ['request' => $request, 'sale' => $newsale, 'policy_number' => $reffrence_number], function ($message) use ($request, $subject) {
-            $message->to('admin@lifeadvice.ca');
-            $message->subject($subject);
-        });
-        return view('frontend.formone.conferm')->with(array('request' => $request));
+        return view('frontend.apps.healthcareapp');
     }
-    public function steponetoshow($id)
+    public function freelancerapp()
     {
-        $data = temproary_sales::where('temp_id' , $id)->first();
-        $sale = temproary_sales::find($data->id);
-        $sale->step= 1;
-        $sale->save();
-        return view('frontend.apply.templatetwo')->with(array('data' => $data));
+        return view('frontend.apps.freelancerapp');
     }
-    public function applystepone(Request $request)
+    public function socialmediaapp()
     {
-        $tempr = temproary_sales::where('temp_id' , $request->temp_id)->first();
-        $sale = temproary_sales::find($tempr->id);
-        $sale->steponedata = serialize($request->all());
-        $sale->step= 2;
-        $sale->save();
-        $url = url('step-two').'/'.$request->temp_id;
-        return Redirect::to($url);
+        return view('frontend.apps.socialmediaapp');
     }
-    public function steptwotoshow($id)
+    public function laundryapp()
     {
-        $data = temproary_sales::where('temp_id' , $id)->first();
-        return view('frontend.apply.templatetwo')->with(array('data' => $data));
+        return view('frontend.apps.laundryapp');
     }
-    public function applysteptwo(Request $request)
+    public function portfolio()
     {
-        $tempr = temproary_sales::where('temp_id' , $request->temp_id)->first();
-        $sale = temproary_sales::find($tempr->id);
-        $sale->steptwodata = serialize($request->all());
-        $sale->step= 3;
-        $sale->save();
-        $url = url('step-three').'/'.$request->temp_id;
-        return Redirect::to($url);
+        return view('frontend.portfolio.index');
+    }
+    public function contactus()
+    {
+        return view('frontend.contactus.index');
+    }
+    public function faq()
+    {
+        return view('frontend.faq.index');
     }
     public function stepthreetoshow($id)
     {
@@ -624,13 +161,13 @@ class SiteController extends Controller
     public function blogdetail($id)
     {
         $data = blogs::where('url', $id)->first();
-        return view('frontend.companypages.blogdetails')->with(array('data' => $data));
+        return view('frontend.blogs.detail')->with(array('data' => $data));
     }
     public function blogbycategory($id)
     {
         $category = blogcategories::where('url', $id)->where('website', 'lifeadvice')->first();
         $data = DB::table('blogs')->where('category_id', $category->id)->where('website', 'lifeadvice')->paginate(9);
-        return view('frontend.companypages.blogsbycategory')->with(array('data' => $data, 'category' => $category));
+        return view('frontend.blogs.bycategory')->with(array('data' => $data, 'category' => $category));
     }
     public function supervisa()
     {
@@ -745,13 +282,10 @@ class SiteController extends Controller
     }
     public function blogs()
     {
-        $data = DB::table('blogs')->where('website', 'lifeadvice')->orderby('id' , 'desc')->paginate(9);
-        return view('frontend.companypages.blogs')->with(array('data' => $data));
+        $data = DB::table('blogs')->orderby('id' , 'desc')->get();
+        return view('frontend.blogs.index')->with(array('data' => $data));
     }
-    public function contactus()
-    {
-        return view('frontend.companypages.contact');
-    }
+    
     public function contacts(Request $request)
     {
         $this->validate($request, [
@@ -777,10 +311,7 @@ class SiteController extends Controller
     {
         return view('frontend.companypages.privacypolicy');
     }
-    public function faq()
-    {
-        return view('frontend.companypages.faq');
-    }
+    
     public function claim()
     {
         return view('frontend.companypages.claim');

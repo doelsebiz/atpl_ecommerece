@@ -27,60 +27,33 @@ Route::name('user.')->prefix('user')->group(function(){
     Route::get('/dashboard',[HomeController::class, 'dashboard'])->name('dashboard');
     
 });
-Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
-Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
-
-Route::POST('customlogin', [CustomLoginController::class, 'customlogin']);
-
-Route::POST('sendsecurelink', [CustomLoginController::class, 'sendsecurelink']);
-
-Route::get('securelogin/{id}', [CustomLoginController::class, 'securelogin']);
-
-
-Route::get('step-one/{id}', [SiteController::class, 'steponetoshow']);
-Route::POST('applystepone', [SiteController::class, 'applystepone']);
-Route::get('step-two/{id}', [SiteController::class, 'steptwotoshow']);
-Route::POST('applysteptwo', [SiteController::class, 'applysteptwo']);
-
-Route::get('step-three/{id}', [SiteController::class, 'stepthreetoshow']);
-Route::get('backonestep/{id}', [SiteController::class, 'backonestep']);
-Route::POST('completeandpurchase', [SiteController::class, 'completeandpurchase']);
-
 
 
 // Site Routes
 Route::get('/', [SiteController::class, 'index']);
-Route::get('/profile', [HomeController::class, 'dashboard'])->name('userprofile');
-Route::get('/requests', [HomeController::class, 'requests'])->name('requests');
-
-Route::get('/getstates/{id}', [SiteController::class, 'getstates']);
-
 Route::get('/ecommerece-app', [SiteController::class, 'ecommereceapp']);
 Route::get('/taxi-app', [SiteController::class, 'taxiapp']);
 Route::get('education-app', [SiteController::class, 'educationapp']);
-Route::POST('refundrequests', [HomeController::class, 'refundrequests']);
-Route::POST('extendpolicy', [HomeController::class, 'extendpolicy']);
-Route::get('/udashboard', [SiteController::class, 'udashboard']);
-Route::get('/qoutes-detail', [SiteController::class, 'qoutesdetail']);
-Route::get('/super-visa-insurance', [SiteController::class, 'supervisa']);
-Route::get('/travel-insurance', [SiteController::class, 'travel']);
-Route::get('/single-trip-insurance', [SiteController::class, 'singletripinsurance']);
-Route::get('/visitor-insurance', [SiteController::class, 'visitorinsurance']);
-Route::get('/student-insurance', [SiteController::class, 'studentinsurance']);
-Route::POST('/sendcompareemail', [SiteController::class, 'sendcompareemail']);
-Route::get('/terms-and-condition', [SiteController::class, 'termsandcondition']);
-Route::get('/term-life-insurance', [SiteController::class, 'termlifeinsurance']);
+Route::get('datting-app', [SiteController::class, 'dattingapp']);
+Route::get('pharmacy-app', [SiteController::class, 'pharmacyapp']);
+Route::get('/fitness-app', [SiteController::class, 'fitnessapp']);
+Route::get('/food-delivery-app', [SiteController::class, 'fooddeliveryapp']);
+Route::get('/beauty-saloon-app', [SiteController::class, 'beautysaloonapp']);
+Route::get('/consultation-app', [SiteController::class, 'consultationapp']);
+Route::get('/real-estate-app', [SiteController::class, 'realestateapp']);
+Route::get('/datting-app', [SiteController::class, 'dattingapp']);
+Route::get('/home-service-app', [SiteController::class, 'homeserviceapp']);
+Route::get('/health-care-app', [SiteController::class, 'healthcareapp']);
+Route::get('/freelancer-app', [SiteController::class, 'freelancerapp']);
+Route::get('/social-media-app', [SiteController::class, 'socialmediaapp']);
+Route::get('laundry-app', [SiteController::class, 'laundryapp']);
+Route::get('/our-services', [SiteController::class, 'ourservices']);
+Route::get('/portfolio', [SiteController::class, 'portfolio']);
+Route::get('/faq', [SiteController::class, 'faq']);
+Route::get('/contact-us', [SiteController::class, 'contactus']);
 
 
-Route::POST('slideadditionaltravelers', [SiteController::class, 'checkadditionaltravelers']);
 
-
-
-
-
-Route::get('/life-insurance', [SiteController::class, 'lifeinsurance']);
-Route::get('/desability', [SiteController::class, 'desability']);
-Route::get('/critical-illness', [SiteController::class, 'criticalillness']);
 Route::get('/health-insurance', [SiteController::class, 'health']);
 Route::get('/product', [SiteController::class, 'product']);
 Route::get('/claim', [SiteController::class, 'claim']);
@@ -90,11 +63,10 @@ Route::get('/mortgage', [SiteController::class, 'mortgage']);
 Route::get('/tfsa', [SiteController::class, 'tfsa']);
 Route::get('/nonmedical', [SiteController::class, 'nonmedical']);
 Route::get('/about-us', [SiteController::class, 'aboutus']);
-Route::get('/contactus', [SiteController::class, 'contactus']);
 Route::POST('/contactus', [SiteController::class, 'contacts']);
 Route::get('/privacypolicy', [SiteController::class, 'privacypolicy']);
 Route::get('/blogs', [SiteController::class, 'blogs']);
-Route::get('/faq', [SiteController::class, 'faq']);
+
 Route::get('/login', [SiteController::class, 'login']);
 Route::post('/expertip',[SiteController::class , 'newsletter'])->name('news_letter');
 Route::get('/all/newsletters',[SiteController::class , 'viewLetters'])->name('view_news');

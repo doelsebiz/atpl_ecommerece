@@ -61,63 +61,60 @@
                <div  class="d-flex">
                   <li class="d-flex">
                      <span class="material-symbols-outlined">local_shipping</span>
-                     <a href="{{ url('ecommerece-app') }}">Food Delivery</a>
+                     <a href="{{ url('food-delivery-app') }}">Food Delivery</a>
                   </li>
                   <li class="d-flex">
                      <span class="material-symbols-outlined">health_and_beauty</span>
-                     <a href="{{ url('taxi-app') }}">Beauty Saloon</a>
-                  </li>
-                  <li class="d-flex">
-                     <span class="material-symbols-outlined">car_rental</span>
-                     <a href="{{ url('education-app') }}">Rental</a>
+                     <a href="{{ url('beauty-saloon-app') }}">Beauty Saloon</a>
                   </li>
                   <li class="d-flex">
                      <span class="material-symbols-outlined">handshake</span>
-                     <a href="{{ url('pharmacy-app') }}">Consultation App</a>
+                     <a href="{{ url('consultation-app') }}">Consultation App</a>
                   </li>
                   <li class="d-flex">
                      <span class="material-symbols-outlined">apartment</span>
-                     <a href="{{ url('taxi-app') }}">Real Estate</a>
+                     <a href="{{ url('real-estate-app') }}">Real Estate</a>
+                  </li>
+                  <li class="d-flex">
+                     <span class="material-symbols-outlined">favorite</span>
+                     <a href="{{ url('datting-app') }}">Datting App</a>
                   </li>
                </div>
                <div  class="d-flex">
                   <li class="d-flex">
                      <span class="material-symbols-outlined">home_repair_service</span>
-                     <a href="{{ url('ecommerece-app') }}">Home Service</a>
+                     <a href="{{ url('home-service-app') }}">Home Service</a>
                   </li>
                   <li class="d-flex">
                      <span class="material-symbols-outlined">health_and_safety</span>
-                     <a href="{{ url('taxi-app') }}">HealthCare</a>
+                     <a href="{{ url('health-care-app') }}">HealthCare</a>
                   </li>
                   <li class="d-flex">
                      <span class="material-symbols-outlined">trending_up</span>
-                     <a href="{{ url('education-app') }}">Freelancer App</a>
+                     <a href="{{ url('freelancer-app') }}">Freelancer App</a>
                   </li>
                   <li class="d-flex">
                      <span class="material-symbols-outlined">public</span>
-                     <a href="{{ url('pharmacy-app') }}">Social Media App</a>
+                     <a href="{{ url('social-media-app') }}">Social Media App</a>
                   </li>
                   <li class="d-flex">
                      <span class="material-symbols-outlined">laundry</span>
-                     <a href="{{ url('fitness-app') }}">Laundry App</a>
+                     <a href="{{ url('laundry-app') }}">Laundry App</a>
                   </li>
                </div>
                <div  class="d-flex">
-                  <li class="d-flex">
-                     <span class="material-symbols-outlined">favorite</span>
-                     <a href="{{ url('ecommerece-app') }}">Datting App</a>
-                  </li>
+                  
                   
                   <li></li>
                   <li></li>
                   <li></li>
                   <li></li>
                </div>
-               <div class="menueunderline">
+               <!-- <div class="menueunderline">
                      <div style="width:100%;text-align: center;">
                         <mark class="sale">Click to On Demand Applications</mark>
                      </div>
-               </div>
+               </div> -->
             </ul>
          </li>
          <!-- <li class="menu-item-has-children">

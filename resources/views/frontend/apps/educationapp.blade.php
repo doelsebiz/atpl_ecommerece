@@ -8,7 +8,7 @@
 <link href="{{ url('public/app/css/magnific-popup.css') }}" rel="stylesheet">
 <link href="{{ url('public/app/css/slick.css') }}" rel="stylesheet">
 <link href="{{ url('public/app/css/slick-theme.css') }}" rel="stylesheet">
-
+<link rel="stylesheet" href="{{ url('public/assets/css/taxi/style.css') }}" />
 <!-- On Scroll Animations -->
 <link href="{{ url('public/app/css/animate.css') }}" rel="stylesheet">
 
@@ -76,940 +76,356 @@
    </div>
    <!-- End container -->
 </section>
+<section class="common-section-all what-you-get beckDarkGround noBeckGroundOnlyGrey">
+   <div class="container">
+      <div class="new-heading-style text-center">
+         <h5>Features In This App</h5>
+         <h4 class="text-center">We’ve Many More Features To Make<br> Your Education App Outshine</h4>
+      </div>
+      <ul class="setting-consult-list customSettingList">
+         <li class="clickcustomform wow flipInX" style="visibility: visible; animation-name: flipInX;">
+            <img src="https://www.code-brew.com//wp-content/uploads/2020/09/group-20@2x.png" alt="Build-Interactive-Engaging-Fully-Featured-Education-Apps" style="">
+            <h5>Share Availability</h5>
+            <p>Let tutors &amp; set their availability and time slots as per their convenience</p>
+         </li>
+         <li class="clickcustomform wow flipInX" style="visibility: visible; animation-name: flipInX;">
+            <img src="https://www.code-brew.com//wp-content/uploads/2020/09/group-21@2x.png" alt="Create-Education-Apps-That-Transform-Learning-Experience" style="">
+            <h5>Schedule Classes</h5>
+            <p>Students can schedule a classroom session for a day or time that suits them.</p>
+         </li>
+         <li class="clickcustomform wow flipInX" style="visibility: visible; animation-name: flipInX;">
+            <img src="https://www.code-brew.com//wp-content/uploads/2020/09/group-22@2x.png" alt="Build-Next-Gen-Learning-&amp;-Education-Mobile-Apps" style="">
+            <h5>Performance Tracker</h5>
+            <p>Tutors &amp; students can track performance to identify the areas of improvement.</p>
+         </li>
+         <li class="clickcustomform wow flipInX" style="visibility: visible; animation-name: flipInX;">
+            <img src="https://www.code-brew.com//wp-content/uploads/2020/09/group-23@2x.png" alt="Advance-Features-To-Make-Your-Education-App" style="">
+            <h5>Memberships &amp; Subscription</h5>
+            <p>Offer memberships &amp; subscription to increase engagement &amp; revenue for your app.</p>
+         </li>
+         <li class="clickcustomform wow flipInX" style="visibility: visible; animation-name: flipInX;">
+            <img src="https://www.code-brew.com//wp-content/uploads/2020/09/group-24@2x.png" alt="We-Create-Finest-Edtech-Apps-For-Businesses" style="">
+            <h5>Discounts &amp; Offers</h5>
+            <p>Offer discounts, promo codes, etc. on educational courses to attract new customers &amp; boost sales.</p>
+         </li>
+         <li class="clickcustomform wow flipInX" style="visibility: visible; animation-name: flipInX;">
+            <img src="https://www.code-brew.com//wp-content/uploads/2020/09/group-25@2x.png" alt="Build-Finest-Edtech-Apps-With-Code-Brew-Labs" style="">
+            <h5>Track History</h5>
+            <p>Allow teachers &amp; students to track all their past sessions, downloaded documents, videos &amp; transactions.</p>
+         </li>
+      </ul>
+   </div>
+</section>
 <!-- END HERO-1 -->
 <!-- FEATURES-1
    ============================================= -->
-<section id="features-1" style="padding-top: 50px;" class="p-bottom-60 featuress-section division">
-   <div class="container">
-      <div class="row">
-         <!-- FEATURE BOX #1 -->
-         <div class="col-md-4 animated" data-animation="fadeInUp" data-animation-delay="300">
-            <div class="fbox-1 box-icon-lg blue-icon">
-               <!-- Icon -->
-               <span class="pe-7s-global"></span>
-               <!-- Title -->
-               <h5 class="h5-md">Global Experience</h5>
-               <!-- Text -->
-               <p class="grey-color">Semper lacus cursus porta, feugiat primis ultrice in ligula risus auctor tempus feugiat dolor, felis lacinia risus porta
-               </p>
-            </div>
-         </div>
-         <!-- FEATURE BOX #2 -->
-         <div class="col-md-4 animated" data-animation="fadeInUp" data-animation-delay="400">
-            <div class="fbox-1 box-icon-lg blue-icon">
-               <!-- Icon -->
-               <span class="pe-7s-safe"></span>
-               <!-- Title -->
-               <h5 class="h5-md">Secure Payments</h5>
-               <!-- Text -->
-               <p class="grey-color">Feugiat primis ultrice semper lacus cursus porta, in ligula risus auctor tempus feugiat dolor, felis lacinia risus porta
-               </p>
-            </div>
-         </div>
-         <!-- FEATURE BOX #3 -->
-         <div class="col-md-4 animated" data-animation="fadeInUp" data-animation-delay="500">
-            <div class="fbox-1 box-icon-lg blue-icon">
-               <!-- Icon -->
-               <span class="pe-7s-bell"></span>
-               <!-- Title -->
-               <h5 class="h5-md">Notifications</h5>
-               <!-- Text -->
-               <p class="grey-color">Porta semper lacus cursus, feugiat primis ultrice in ligula risus auctor tempus feugiat dolor, felis lacinia risus porta
-               </p>
-            </div>
-         </div>
-      </div>
-      <!-- End row -->
-   </div>
-   <!-- End container -->
-</section>
+   <style type="text/css">
+      .fbox-1{
+         background-color: #1e1c22;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+      }
+      .new-heading-style h4 {
+          color: white !important;
+          font-size: 18px;
+      }
+      .new-heading-style h5{
+         color: white;
+         font-size: 40px;
+      }
+      .noBeckGroundOnlyGrey {
+       background-image: none;
+/*       background-color: rgba(143, 209, 210, .14);*/
+       padding-bottom: 70px;
+   }
+   .common-section-all {
+    padding: 80px 0;
+    float: left;
+    width: 100%;
+}
+   </style>
+
+
 <!-- END FEATURES-1 -->
-<!-- CONTENT-4
-   ============================================= -->
-<section id="content-4" class="bg-scroll wide-60 content-section division">
-   <div class="container">
-      <div class="row d-flex align-items-center">
-         <!-- CONTENT IMAGE -->
-         <div class="col-md-6 animated" data-animation="fadeInRight" data-animation-delay="500">
-            <div class="content-img">
-               <img class="img-fluid" src="{{ url('public/app/images/hero-5-img.png') }}" alt="content-image" />
-            </div>
-         </div>
-         <!-- CONTENT TEXT -->
-         <div class="col-md-6">
-            <div class="content-txt ind-45">
-               <!-- Title -->
-               <h2 class="h2-xs animated" data-animation="fadeInLeft" data-animation-delay="300">
-                  Most Efficient Bitcoin Wallet
-               </h2>
-               <!-- Text -->
-               <p class="animated" data-animation="fadeInLeft" data-animation-delay="400">
-                  An enim nullam tempor sapien gravida donec enim ipsum porta justo integer at odio velna vitae auctor integer congue magna at pretium purus pretium ligula rutrum luctus risus
-               </p>
-               <!-- Title -->
-               <h5 class="h5-md animated" data-animation="fadeInLeft" data-animation-delay="500">
-                  Feature Integration
-               </h5>
-               <!-- Text -->
-               <p class="animated" data-animation="fadeInLeft" data-animation-delay="600">
-                  An nullam tempor sapien, eget gravida donec enim ipsum porta justo integer at odio velna vitae auctor integer congue
-               </p>
-               <!-- Title -->
-               <h5 class="h5-md animated" data-animation="fadeInLeft" data-animation-delay="700">
-                  Multiple Discussions
-               </h5>
-               <!-- Text -->
-               <p class="animated" data-animation="fadeInLeft" data-animation-delay="800">
-                  Justo integer at odio velna vitae auctor integer congue magna undo impedit. Gravida magna lacus odio ac risus
-               </p>
-            </div>
-         </div>
-         <!-- END CONTENT TEXT -->
-      </div>
-      <!-- End row -->
-   </div>
-   <!-- End container -->
-</section>
-<!-- END CONTENT-4 -->
 <!-- CONTENT-5
    ============================================= -->
-<section id="content-5" class="p-bottom-80 content-section">
-   <div class="bg-scroll p-top-100 bg-inner bg-lightpurple division" style="background-image: url(./{{ url('public/app/images/tra-bg-1.png') }});">
-      <div class="container white-color">
-         <div class="row d-flex align-items-center">
-            <!-- CONTENT TXT -->
-            <div class="col-md-6">
-               <div class="content-txt ind-45">
-                  <!-- Title -->
-                  <h2 class="h2-xs animated" data-animation="fadeInRight" data-animation-delay="300">
-                     Available On All Your Devices
-                  </h2>
-                  <!-- Text -->
-                  <p class="animated" data-animation="fadeInRight" data-animation-delay="400">
-                     An orci nullam tempor sapien, eget gravida integer donec ipsum porta justo at odio integer congue magna undo auctor gravida velna magna orci lacus odio ac risus auctor faucibus orci ligula massa luctus et ultrices posuere cubilia
-                  </p>
-                  <!-- APP DEVICES -->
-                  <div class="app-devices clearfix animated" data-animation="fadeInRight" data-animation-delay="500">
-                     <!-- Icons -->
-                     <i class="fas fa-tablet-alt f-tablet"></i>
-                     <i class="fas fa-mobile-alt f-phone"></i>
-                     <!-- Text -->
-                     <div class="app-devices-desc">
-                        <p class="p-small">Available on iPhone, iPad and all Android devices from 5.5</p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <!-- END CONTENT TXT -->
-            <!-- CONTENT IMAGE -->
-            <div class="col-md-6 animated" data-animation="fadeInLeft" data-animation-delay="500">
-               <div class="content-5-img ind-15">
-                  <img class="img-fluid" src="{{ url('public/app/images/image-02.png') }}" alt="content-image">
-               </div>
-            </div>
-         </div>
-         <!-- End row -->
-      </div>
-      <!-- End container -->
-   </div>
-   <!-- End Inner Background -->
-</section>
-<section id="team-1" class="bg-fixed bg-lightgrey wide-100 team-section division">
+<section id="features-3" class="bg-fixed featuress-section division" style="background-image: url(./{{ url('public/app/images/tra-waves.png') }}); background-position: center bottom;">
    <div class="container">
-      <!-- SECTION TITLE -->
-      <div class="row">
-         <div class="col-md-10 offset-md-1 section-title">
-            <!-- Title 	-->
-            <h2 class="h2-lg">Our Executive Team</h2>
-            <!-- Text -->
-            <p>Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero tempus, tempor posuere ligula varius
-            </p>
-         </div>
-         <!-- End row -->
-      </div>
-      <!-- END SECTION TITLE -->
-      <div class="row">
-         <!-- TEAM MEMBER #1 -->
-         <div class="col-md-6 col-lg-3 animated" data-animation="fadeInUp" data-animation-delay="300">
-            <div class="team-member green-hover">
-               <div class="box-line"></div>
-               <!-- Team Member Photo -->
-               <div class="team-member-photo">
-                  <img class="img-fluid" src="{{ url('public/app/images/team-1.jpg') }}" alt="team-member-foto">
-               </div>
-               <!-- Team Member Meta -->
-               <div class="team-img-meta">
-                  <h5 class="h5-sm">Jonathan Barnes</h5>
-                  <span>Founder</span>
-                  <!-- Social Icons -->
-                  <div class="tm-social clearfix">
-                     <ul class="text-center clearfix">
-                        <li><a href="#" class="ico-facebook"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#" class="ico-twitter"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#" class="ico-dribbble"><i class="fab fa-dribbble"></i></a></li>
-                        <!--
-                           <li><a href="#" class="ico-behance"><i class="fab fa-behance"></i></a></li>										
-                           <li><a href="#" class="ico-instagram"><i class="fab fa-instagram"></i></a></li>
-                           <li><a href="#" class="ico-pinterest"><i class="fab fa-pinterest-p"></i></a></li>
-                           <li><a href="#" class="ico-google-plus"><i class="fab fa-google-plus-g"></i></a></li>
-                           <li><a href="#" class="ico-linkedin"><i class="fab fa-linkedin-in"></i></a></li>
-                           <li><a href="#" class="ico-tumblr"><i class="fab fa-tumblr"></i></a></li>
-                           <li><a href="#" class="ico-youtube"><i class="fab fa-youtube"></i></a></li>
-                           <li><a href="#" class="ico-vk"><i class="fab fa-vk"></i></a></li>-->
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- END TEAM MEMBER #1 -->
-         <!-- TEAM MEMBER #2 -->
-         <div class="col-md-6 col-lg-3 animated" data-animation="fadeInUp" data-animation-delay="400">
-            <div class="team-member green-hover">
-               <div class="box-line"></div>
-               <!-- Team Member Photo -->
-               <div class="team-member-photo">
-                  <img class="img-fluid" src="{{ url('public/app/images/team-2.jpg') }}" alt="team-member-foto">
-               </div>
-               <!-- Team Member Meta -->
-               <div class="team-img-meta">
-                  <h5 class="h5-sm">Hannah Harper</h5>
-                  <span>Project Manager</span>
-                  <!-- Social Icons -->
-                  <div class="tm-social clearfix">
-                     <ul class="text-center clearfix">
-                        <li><a href="#" class="ico-facebook"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#" class="ico-twitter"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#" class="ico-dribbble"><i class="fab fa-dribbble"></i></a></li>
-                        <!--
-                           <li><a href="#" class="ico-behance"><i class="fab fa-behance"></i></a></li>										
-                           <li><a href="#" class="ico-instagram"><i class="fab fa-instagram"></i></a></li>
-                           <li><a href="#" class="ico-pinterest"><i class="fab fa-pinterest-p"></i></a></li>
-                           <li><a href="#" class="ico-google-plus"><i class="fab fa-google-plus-g"></i></a></li>
-                           <li><a href="#" class="ico-linkedin"><i class="fab fa-linkedin-in"></i></a></li>
-                           <li><a href="#" class="ico-tumblr"><i class="fab fa-tumblr"></i></a></li>
-                           <li><a href="#" class="ico-youtube"><i class="fab fa-youtube"></i></a></li>
-                           <li><a href="#" class="ico-vk"><i class="fab fa-vk"></i></a></li>-->
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- END TEAM MEMBER #2 -->
-         <!-- TEAM MEMBER #3 -->
-         <div class="col-md-6 col-lg-3 animated" data-animation="fadeInUp" data-animation-delay="500">
-            <div class="team-member green-hover">
-               <div class="box-line"></div>
-               <!-- Team Member Photo -->
-               <div class="team-member-photo">
-                  <img class="img-fluid" src="{{ url('public/app/images/team-3.jpg') }}" alt="team-member-foto">
-               </div>
-               <!-- Team Member Meta -->
-               <div class="team-img-meta">
-                  <h5 class="h5-sm">Matthew Anderson</h5>
-                  <span>Programmer</span>
-                  <!-- Social Icons -->
-                  <div class="tm-social clearfix">
-                     <ul class="text-center clearfix">
-                        <li><a href="#" class="ico-facebook"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#" class="ico-twitter"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#" class="ico-dribbble"><i class="fab fa-dribbble"></i></a></li>
-                        <!--
-                           <li><a href="#" class="ico-behance"><i class="fab fa-behance"></i></a></li>										
-                           <li><a href="#" class="ico-instagram"><i class="fab fa-instagram"></i></a></li>
-                           <li><a href="#" class="ico-pinterest"><i class="fab fa-pinterest-p"></i></a></li>
-                           <li><a href="#" class="ico-google-plus"><i class="fab fa-google-plus-g"></i></a></li>
-                           <li><a href="#" class="ico-linkedin"><i class="fab fa-linkedin-in"></i></a></li>
-                           <li><a href="#" class="ico-tumblr"><i class="fab fa-tumblr"></i></a></li>
-                           <li><a href="#" class="ico-youtube"><i class="fab fa-youtube"></i></a></li>
-                           <li><a href="#" class="ico-vk"><i class="fab fa-vk"></i></a></li>-->
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- END TEAM MEMBER #3 -->
-         <!-- TEAM MEMBER #4 -->
-         <div class="col-md-6 col-lg-3 animated" data-animation="fadeInUp" data-animation-delay="600">
-            <div class="team-member green-hover">
-               <div class="box-line"></div>
-               <!-- Team Member Photo -->
-               <div class="team-member-photo">
-                  <img class="img-fluid" src="{{ url('public/app/images/team-4.jpg') }}" alt="team-member-foto">
-               </div>
-               <!-- Team Member Meta -->
-               <div class="team-img-meta">
-                  <h5 class="h5-sm">Megan Coleman</h5>
-                  <span>Graphic Designer</span>
-                  <!-- Social Icons -->
-                  <div class="tm-social clearfix">
-                     <ul class="text-center clearfix">
-                        <li><a href="#" class="ico-facebook"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#" class="ico-twitter"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#" class="ico-dribbble"><i class="fab fa-dribbble"></i></a></li>
-                        <!--
-                           <li><a href="#" class="ico-behance"><i class="fab fa-behance"></i></a></li>										
-                           <li><a href="#" class="ico-instagram"><i class="fab fa-instagram"></i></a></li>
-                           <li><a href="#" class="ico-pinterest"><i class="fab fa-pinterest-p"></i></a></li>
-                           <li><a href="#" class="ico-google-plus"><i class="fab fa-google-plus-g"></i></a></li>
-                           <li><a href="#" class="ico-linkedin"><i class="fab fa-linkedin-in"></i></a></li>
-                           <li><a href="#" class="ico-tumblr"><i class="fab fa-tumblr"></i></a></li>
-                           <li><a href="#" class="ico-youtube"><i class="fab fa-youtube"></i></a></li>
-                           <li><a href="#" class="ico-vk"><i class="fab fa-vk"></i></a></li>-->
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- END TEAM MEMBER #4 -->
-      </div>
-      <!-- End row -->
-      <!-- JOIN TEAM BUTTON -->
-      <div class="row">
-         <div class="col-lg-10 offset-lg-1">
-            <div class="join-team text-center m-top-25">
-               <!-- Title -->
-               <h4 class="h4-md"><span>We Are Hiring!</span> Become part of our talented team</h4>
-               <!-- Text -->
-               <p class="p-md">Gravida enim tempor sapien eget gravida donec enim ipsum porta justo at odio velna auctor congue vitae magna at risus enim ipsum porta justo integer
-               </p>
-               <!-- Button -->
-               <a href="#contacts-2" class="btn btn-lightgreen">Join Our Team</a>
-            </div>
-         </div>
-      </div>
-      <!-- END JOIN TEAM BUTTON -->
-   </div>
-   <!-- End container -->
-</section>
-<!-- END TEAM-1 -->
-<!-- STATISTIC-2
-   ============================================= -->
-<div id="statistic-2" class="wide-60 statistic-section division">
-   <div class="container">
-      <div class="row d-flex align-items-center">
-         <div class="col-md-6 m-bottom-40">
-            <div class="row">
-               <!-- STATISTIC BLOCK #1 -->
-               <div class="col-sm-6 b-bottom b-right">
-                  <div class="statistic-block text-center box-icon blue-icon animated" data-animation="fadeInUp" data-animation-delay="300">
-                     <span class="pe-7s-smile"></span>
-                     <div class="statistic-number">1154</div>
-                     <p class="p-md">Happy Clients</p>
-                  </div>
-               </div>
-               <!-- STATISTIC BLOCK #2 -->
-               <div class="col-sm-6 b-bottom">
-                  <div class="statistic-block text-center box-icon blue-icon animated" data-animation="fadeInUp" data-animation-delay="400">
-                     <span class="pe-7s-help2"></span>
-                     <div class="statistic-number">409</div>
-                     <p class="p-md">Tickets Closed</p>
-                  </div>
-               </div>
-               <!-- STATISTIC BLOCK #3 -->
-               <div class="col-sm-6 b-right">
-                  <div class="statistic-block text-center box-icon blue-icon animated" data-animation="fadeInUp" data-animation-delay="500">
-                     <span class="pe-7s-users"></span>
-                     <div class="statistic-number">869</div>
-                     <p class="p-md">Followers</p>
-                  </div>
-               </div>
-               <!-- STATISTIC BLOCK #4 -->
-               <div class="col-sm-6">
-                  <div class="statistic-block text-center box-icon blue-icon animated" data-animation="fadeInUp" data-animation-delay="600">
-                     <span class="pe-7s-coffee"></span>
-                     <div class="statistic-number">901</div>
-                     <p class="p-md">Cups of Coffee</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- END STATISTIC BLOCKS -->
-         <!-- STATISTIC IMAGE -->
-         <div class="col-md-6 col-lg-5 offset-lg-1 animated" data-animation="fadeInLeft" data-animation-delay="400">
-            <div class="statistic-img text-center m-bottom-40">
-               <img class="img-fluid" src="{{ url('public/app/images/image-06.png') }}" alt="content-image" />
-            </div>
-         </div>
-         <!-- END STATISTIC IMAGE -->
-      </div>
-      <!-- End row -->
-   </div>
-   <!-- End container -->
-</div>
-<!-- END STATISTIC-2 -->
-<!-- VIDEO-3
-   ============================================= -->
-<section id="video-3" class="bg-scroll bg-dark video-section division">
-   <div class="container">
-      <!-- SECTION TITLE -->
-      <div class="row">
-         <div class="col-md-10 offset-md-1 white-color section-title">
-            <!-- Title 	-->
-            <h2 class="h2-lg">How MobiCom Works</h2>
-            <!-- Text -->
-            <p>Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero tempus, tempor posuere ligula varius
-            </p>
-         </div>
-         <!-- End row -->
-      </div>
-      <!-- END SECTION TITLE -->
-      <div class="row">
-         <div class="video-inner-bg">
-            <div class="col-xl-10 offset-xl-1">
-               <div class="video-content">
-                  <div class="row d-flex align-items-center">
-                     <!-- VIDEO TEXT -->
-                     <div class="col-md-7">
-                        <div class="video-txt p-right-30">
-                           <!-- Title -->
-                           <h4 class="h4-xl">Modern, Powerful and Creative</h4>
-                           <!-- Text -->
-                           <p>Gravida donec integer ipsum porta justo at velna vitae auctor integer magna at risus auctor purus rutrum primis ultrice ligula luctus impedit magna dolor vitae risus auctor purus pretium
-                           </p>
-                           <!-- Text  -->
-                           <p>Donec enim ipsum porta justo integer at velna vitae auctor integer congue magna at risus auctor purus unt pretium ligula rutrum sapien ultrice eros dolor luctus odio placerat massa magna cursus
-                           </p>
-                           <!-- Button -->
-                           <a href="#" class="btn btn-lightgreen">Discover More</a>
-                        </div>
-                     </div>
-                     <!-- END VIDEO TEXT -->
-                     <!-- VIDEO PREVIEW -->
-                     <div class="col-md-5">
-                        <div class="video-preview text-center">
-                           <!-- Change the link HERE!!! -->
-                           <a class="video-popup" href="https://www.youtube.com/watch?v=kuceVNBTJio">
-                              <!-- Play Icon -->
-                              <div class="video-block-wrapper">
-                                 <div class="play-icon-green"></div>
-                              </div>
-                              <!-- Preview Image -->
-                              <img class="img-fluid" src="{{ url('public/app/images/video-3-img.png') }}" alt="video-preview">
-                           </a>
-                        </div>
-                     </div>
-                     <!-- END VIDEO PREVIEW -->
-                  </div>
-                  <!-- End row -->
-               </div>
-               <!-- End video-content -->
-            </div>
-            <!-- END CONTENT TEXT -->
-         </div>
-         <!-- End Inner Background -->
-      </div>
-      <!-- End row -->
-   </div>
-   <!-- End container -->
-</section>
-<!-- END VIDEO-3 -->
-<!-- FEATURES-3
-   ============================================= -->
-<section id="features-3" class="bg-fixed wide-70 featuress-section division" style="background-image: url(./{{ url('public/app/images/tra-waves.png') }}); background-position: center bottom;">
-   <div class="container">
-      <!-- SECTION TITLE 	-->
-      <div class="row">
-         <div class="col-md-10 offset-md-1 section-title">
-            <!-- Title 	-->
-            <h2 class="h2-lg">Features In This App</h2>
-            <!-- Text -->
-            <p>Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero tempus, tempor posuere ligula varius
-            </p>
-         </div>
-      </div>
-      <!-- END SECTION TITLE -->
+      
       <div class="row">
          <!-- FEATURE BOX #1 -->
-         <div class="col-md-6 col-lg-3 animated" data-animation="fadeInUp" data-animation-delay="300">
-            <div class="fbox-3 box-icon-lg purple-hover">
-               <div class="box-line"></div>
-               <!-- Icon -->
-               <span class="pe-7s-piggy"></span>
-               <!-- Title -->
-               <h5 class="h5-md">Free Trial</h5>
-               <!-- Text -->
-               <p class="grey-color">Ligula risus auctor tempus dolor lacinia</p>
-            </div>
-         </div>
-         <!-- FEATURE BOX #2 -->
-         <div class="col-md-6 col-lg-3 animated" data-animation="fadeInUp" data-animation-delay="400">
-            <div class="fbox-3 box-icon-lg purple-hover">
-               <div class="box-line"></div>
-               <!-- Icon -->
-               <span class="pe-7s-vector"></span>
-               <!-- Title -->
-               <h5 class="h5-md">Unique Design</h5>
-               <!-- Text -->
-               <p class="grey-color">Dolor feugiat felis lacinia risus an auctor porta</p>
-            </div>
-         </div>
-         <!-- FEATURE BOX #3 -->
-         <div class="col-md-6 col-lg-3 animated" data-animation="fadeInUp" data-animation-delay="500">
-            <div class="fbox-3 box-icon-lg purple-hover">
-               <div class="box-line"></div>
-               <!-- Icon -->
-               <span class="pe-7s-target"></span>
-               <!-- Title -->
-               <h5 class="h5-md">Cross-Platform</h5>
-               <!-- Text -->
-               <p class="grey-color">Ligula auctor tempus unt dolor feugiat felis</p>
-            </div>
-         </div>
-         <!-- FEATURE BOX #4 -->
-         <div class="col-md-6 col-lg-3 animated" data-animation="fadeInUp" data-animation-delay="600">
-            <div class="fbox-3 box-icon-lg purple-hover">
-               <div class="box-line"></div>
-               <!-- Icon -->
-               <span class="pe-7s-edit"></span>
-               <!-- Title -->
-               <h5 class="h5-md">User Friendly</h5>
-               <!-- Text -->
-               <p class="grey-color">Ultrice ligula risus auctor tempus dolor lacinia</p>
-            </div>
-         </div>
-         <!-- FEATURE BOX #5 -->
-         <div class="col-md-6 col-lg-3 animated" data-animation="fadeInUp" data-animation-delay="700">
-            <div class="fbox-3 box-icon-lg purple-hover">
-               <div class="box-line"></div>
-               <!-- Icon -->
-               <span class="pe-7s-mail-open-file"></span>
-               <!-- Title -->
-               <h5 class="h5-md">Mailer Engine</h5>
-               <!-- Text -->
-               <p class="grey-color">Feugiat primis in lacinia risus an auctor</p>
-            </div>
-         </div>
-         <!-- FEATURE BOX #6 -->
-         <div class="col-md-6 col-lg-3 animated" data-animation="fadeInUp" data-animation-delay="800">
-            <div class="fbox-3 box-icon-lg purple-hover">
-               <div class="box-line"></div>
-               <!-- Icon -->
-               <span class="pe-7s-bell"></span>
-               <!-- Title -->
-               <h5 class="h5-md">Notifications</h5>
-               <!-- Text -->
-               <p class="grey-color">Semper lacus cursus porta primis ultrice</p>
-            </div>
-         </div>
+   
+         
          <!-- FEATURE BOX #7 -->
-         <div class="col-md-6 col-lg-3 animated" data-animation="fadeInUp" data-animation-delay="900">
-            <div class="fbox-3 box-icon-lg purple-hover">
-               <div class="box-line"></div>
-               <!-- Icon -->
-               <span class="pe-7s-refresh-2"></span>
-               <!-- Title -->
-               <h5 class="h5-md">Free Updates</h5>
-               <!-- Text -->
-               <p class="grey-color">Cursus porta in ultrice risus auctor porta</p>
-            </div>
-         </div>
-         <!-- FEATURE BOX #8 -->
-         <div class="col-md-6 col-lg-3 animated" data-animation="fadeInUp" data-animation-delay="1000">
-            <div class="fbox-3 box-icon-lg purple-hover">
-               <div class="box-line"></div>
-               <!-- Icon -->
-               <span class="pe-7s-help2"></span>
-               <!-- Title -->
-               <h5 class="h5-md">Fast Support</h5>
-               <!-- Text -->
-               <p class="grey-color">Risus auctor dolor feugiat felis an auctor</p>
-            </div>
-         </div>
       </div>
       <!-- End row -->
    </div>
    <!-- End container -->
 </section>
-<!-- END FEATURES-3 -->
-<!-- TESTIMONIALS-2
-   ============================================= -->
-<section id="reviews-2" class="wide-100 bg-lightgrey reviews-section division">
-   <div class="container">
-      <!-- SECTION TITLE -->
-      <div class="row">
-         <div class="col-md-10 offset-md-1 section-title">
-            <!-- Title 	-->
-            <h2 class="h2-lg">Customers Feedback</h2>
-            <!-- Text -->
-            <p>Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero tempus, tempor posuere ligula varius
-            </p>
-         </div>
-      </div>
-      <!-- END SECTION TITLE -->
-      <!-- TESTIMONIALS CAROUSEL -->
-      <div class="reviews-carousel">
-         <div class="center slider">
-            <!-- TESTIMONIAL #1 -->
-            <div class="review-2">
-               <!-- Testimonial Text -->
-               <div class="review-txt">
-                  <!-- Title -->
-                  <h5 class="h5-lg">Super Support!</h5>
-                  <!-- Testimonial Text -->
-                  <p>Etiam sapien sem at sagittis congue augue massa varius egestas magna suscipit magna tempus aliquet porta rutrum sodales auctor integer risus auctor rutrum
-                  </p>
-               </div>
-               <!-- Testimonial Author Avatar -->
-               <div class="testimonial-avatar text-center">
-                  <img src="{{ url('public/app/images/review-author-1.jpg') }}" alt="review-author-avatar">
-                  <p class="testimonial-autor">pebz13</p>
-                  <span>Programmer</span>
-               </div>
-               <!-- App Rating -->
-               <div class="app-rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-               </div>
-            </div>
-            <!-- END TESTIMONIAL #1 -->
-            <!-- TESTIMONIAL #2 -->
-            <div class="review-2">
-               <!-- Testimonial Text -->
-               <div class="review-txt">
-                  <!-- Title -->
-                  <h5 class="h5-lg">Simple and Useful!</h5>
-                  <!-- Testimonial Text -->
-                  <p>At sagittis congue augue egestas egestas magna ipsum vitae purus ipsum primis in cubilia laoreet augue egestas luctus donec diam ociis ultrice ligula magna suscipit lectus gestas augue in cubilia laoreet
-                  </p>
-               </div>
-               <!-- Testimonial Author Avatar -->
-               <div class="testimonial-avatar clearfix">
-                  <img src="{{ url('public/app/images/review-author-2.jpg') }}" alt="review-author-avatar">
-                  <p class="testimonial-autor">Evelyn Martinez</p>
-                  <span>Housewife</span>
-               </div>
-               <!-- App Rating -->
-               <div class="app-rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half"></i>
-               </div>
-            </div>
-            <!-- END TESTIMONIAL #2 -->
-            <!-- TESTIMONIAL #3 -->
-            <div class="review-2">
-               <!-- Testimonial Text -->
-               <div class="review-txt">
-                  <!-- Title -->
-                  <h5 class="h5-lg">Great Flexibility!</h5>
-                  <!-- Testimonial Text -->
-                  <p>Mauris donec ociis et magnis sapien etiam sapien sem sagittis congue augue egestas et ultrice ligula egestas magna suscipit lectus gestas magna suscipit luctus undo
-                  </p>
-               </div>
-               <!-- Testimonial Author Avatar -->
-               <div class="testimonial-avatar clearfix">
-                  <img src="{{ url('public/app/images/review-author-3.jpg') }}" alt="review-author-avatar">
-                  <p class="testimonial-autor">Robert Peterson</p>
-                  <span>SEO Manager</span>
-               </div>
-               <!-- App Rating -->
-               <div class="app-rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-               </div>
-            </div>
-            <!-- END TESTIMONIAL #3 -->
-            <!-- TESTIMONIAL #4 -->
-            <div class="review-2">
-               <!-- Testimonial Text -->
-               <div class="review-txt">
-                  <!-- Title -->
-                  <h5 class="h5-lg">I love this App!</h5>
-                  <!-- Testimonial Text -->
-                  <p>An augue in cubilia laoreet magna suscipit egestas magna ipsum vitae purus ipsum primis in cubilia laoreet augue ultrice ligula egestas magna suscipit lectus gestas magna viverra dolor neque est gravida
-                  </p>
-               </div>
-               <!-- Testimonial Author Avatar -->
-               <div class="testimonial-avatar clearfix">
-                  <img src="{{ url('public/app/images/review-author-4.jpg') }}" alt="review-author-avatar">
-                  <p class="testimonial-autor">Leslie Serpas</p>
-                  <span>Internet Surfer</span>
-               </div>
-               <!-- App Rating -->
-               <div class="app-rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-               </div>
-            </div>
-            <!-- END TESTIMONIAL #4 -->
-            <!-- TESTIMONIAL #5 -->
-            <div class="review-2">
-               <!-- Testimonial Text -->
-               <div class="review-txt">
-                  <!-- Title -->
-                  <h5 class="h5-lg">Best App for Around!</h5>
-                  <!-- Testimonial Text -->
-                  <p>Egestas egestas magna ipsum vitae purus efficitur ipsum primis in cubilia laoreet augue egestas luctus donec augue in cubilia laoreet ociis vitae purus diam
-                  </p>
-               </div>
-               <!-- Testimonial Author Avatar -->
-               <div class="testimonial-avatar clearfix">
-                  <img src="{{ url('public/app/images/review-author-5.jpg') }}" alt="review-author-avatar">
-                  <p class="testimonial-autor">Marisol19</p>
-                  <span>Senior UX/UI Designer</span>
-               </div>
-               <!-- App Rating -->
-               <div class="app-rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half"></i>
-               </div>
-            </div>
-            <!-- END TESTIMONIAL #5 -->
-            <!-- TESTIMONIAL #6 -->
-            <div class="review-2">
-               <!-- Testimonial Text -->
-               <div class="review-txt">
-                  <!-- Title -->
-                  <h5 class="h5-lg">Minimalistic & Beautiful!</h5>
-                  <!-- Testimonial Text -->
-                  <p>Augue egestas volutpat egestas et augue in cubilia laoreet magna suscipit luctus undo blandit vitae purus non diam tempus aliquet porta rutrum gestas neque est gravida
-                  </p>
-               </div>
-               <!-- Testimonial Author Avatar -->
-               <div class="testimonial-avatar clearfix">
-                  <img src="{{ url('public/app/images/review-author-6.jpg') }}" alt="review-author-avatar">
-                  <p class="testimonial-autor">Dan Hodges</p>
-                  <span>Graphic Designer</span>
-               </div>
-               <!-- App Rating -->
-               <div class="app-rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-               </div>
-            </div>
-            <!-- END TESTIMONIAL #6 -->
-            <!-- TESTIMONIAL #7 -->
-            <div class="review-2">
-               <!-- Testimonial Text -->
-               <div class="review-txt">
-                  <!-- Title -->
-                  <h5 class="h5-lg">Awesome Design!</h5>
-                  <!-- Testimonial Text -->
-                  <p>Egestas et lobortis magna suscipit luctus undo blandit vitae purus lobortis non diam tempus aliquet porta rutrum arcu aenean primis in augue in cubilia laoreet
-                  </p>
-               </div>
-               <!-- Testimonial Author Avatar -->
-               <div class="testimonial-avatar clearfix">
-                  <img src="{{ url('public/app/images/review-author-4.jpg') }}" alt="review-author-avatar">
-                  <p class="testimonial-autor">Amelie Peterson</p>
-                  <span>Senior UX/UI Designer</span>
-               </div>
-               <!-- App Rating -->
-               <div class="app-rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-               </div>
-            </div>
-            <!-- END TESTIMONIAL #7 -->
-         </div>
-      </div>
-      <!-- TESTIMONIALS CAROUSEL -->
-   </div>
-   <!-- End container -->
-</section>
-<!-- END TESTIMONIALS-2 -->
-<!-- MORE APPS
-   ============================================= -->
-<!-- END MORE APPS -->
-<!-- DOWNLOAD-2
-   ============================================= -->
+<style type="text/css">
+   .setting-consult-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 70px -15px 0;
+}
+.setting-consult-list li {
+    width: calc(25% - 10px);
+    margin: 5px;
+    cursor: pointer;
+    text-align: center;
+    background-color: white;
+    padding: 15px 15px 35px;
+    border-radius: 30px;
+    border: 1px solid transparent;
+    color: black;
+}
+@media (min-width: 992px)
+{
+    .setting-consult-list li {
+    width: calc(33.33% - 30px);
+    text-align: left;
+    margin-top: 60px;
+}
+}
+.setting-consult-list li>img {
+    width: 100px;
+    margin-top: -50px;
+    margin-bottom: -20px;
+}
+.setting-consult-list li h5 {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: normal;
+    color: #1e1e1e;
+    margin: 5px 0 0;
+}
+.setting-consult-list li p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.56;
+    color: #626262;
+    margin: 10px 0 0;
+}
+.cta-section-ride.blue-beck h4 {
+    color: #fff;
+    font-weight: 400;
+}
+.cta-section-ride h4 {
+    font-size: 30px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: -.83px;
+    color: #07004f;
+    margin-bottom: 25px;
+    margin-top: 0;
+}
+.cta-section-ride.blue-beck {
+    background-color: rgba(0, 0, 0, .5);
+    margin-top: 70px;
+}
+.cta-section-ride.blue-beck {
+    background-color: #272727;
+    padding: 50px;
+}
+.edutechFeatureText .new-heading-style {
+    margin-bottom: 30px;
+}
+.new-heading-style h4 {
+    font-size: 30px;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.3;
+    letter-spacing: normal;
+    text-align: left;
+    color: #131d2b;
+    margin: 20px 0;
+    margin-bottom: 10px;
+}
+.new-heading-style p {
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.44;
+    letter-spacing: normal;
+    text-align: left;
+    color: white;
+}
+</style>
 <section id="download-2" class="wide-70 download-section">
    <div class="bg-scroll bg-inner division">
       <div class="container white-color">
          <div class="row d-flex align-items-center">
             <!-- DOWNLOAD TXT -->
-            <div class="col-md-7 col-lg-7">
-               <div class="download-txt ind-45">
+            <div class="col-md-12 col-lg-12">
+               <div class="download-txt ind-45" style="padding-top:50px;padding-bottom:50px;">
                   <!-- Title -->
-                  <h2 class="h2-xs animated" data-animation="fadeInRight" data-animation-delay="300">
-                     Do even more with the MobiCom App
+                  <h2 class="h2-xs animated text-center" data-animation="fadeInRight" data-animation-delay="300">
+                     Different Consultation Modes To Enable Learning Anywhere, Anytime
                   </h2>
                   <!-- Text -->
-                  <p class="p-lg animated" data-animation="fadeInRight" data-animation-delay="400">
-                     Feugiat eros, ac tincidunt ligula massa in faucibus orci luctus posuere cubilia curae integer congue leo metus
-                  </p>
-                  <!-- HERO STORE BADGES -->
-                  <div class="stores-badge animated" data-animation="fadeInRight" data-animation-delay="500">
-                     <!-- AppStore -->
-                     <a href="#" class="store">
-                     <img class="appstore-white" src="{{ url('public/app/images/store_badges/appstore-tra-white.png') }}" width="155" height="50" alt="appstore-logo">
-                     </a>
-                     <!-- Google Play -->
-                     <a href="#" class="store">
-                     <img class="googleplay-white" src="{{ url('public/app/images/store_badges/googleplay-tra-white.png') }}" width="164" height="50" alt="googleplay-logo">
-                     </a>
-                  </div>
+                  <ul class="setting-consult-list customSettingList">
+                     <li class="clickcustomform wow flipInX" style="visibility: visible; animation-name: flipInX;">
+                        <img src="https://www.code-brew.com/wp-content/uploads/2020/09/group-17@3x.png" alt="Create-Your-Own-Online-Education-Application" style="">
+                        <h5>Video Consultation</h5>
+                        <p>Students can leverage from 1:1 video consultation with the tutor of their choice</p>
+                     </li>
+                     <li class="clickcustomform wow flipInX" style="visibility: visible; animation-name: flipInX;">
+                        <img src="https://www.code-brew.com/wp-content/uploads/2020/09/group-18@3x.png" alt="Create-Your-Own-Online-Education-Application" style="">
+                        <h5>Voice Consultation</h5>
+                        <p>Enable voice calling to communicate with tutors through built-in call feature.</p>
+                     </li>
+                     <li class="clickcustomform wow flipInX" style="visibility: visible; animation-name: flipInX;">
+                        <img src="https://www.code-brew.com/wp-content/uploads/2020/09/group-19@3x.png" alt="Education-App-Development-Services" style="">
+                        <h5>Text Consultation</h5>
+                        <p>In-app chat feature to get queries, doubts, etc.resolved in real-time from tutors.</p>
+                     </li>
+                  </ul>
                </div>
             </div>
             <!--END DOWNLOAD TXT -->
             <!-- DOWNLOAD IMAGE -->
-            <div class="col-md-5 col-lg-4 offset-lg-1 animated" data-animation="fadeInLeft" data-animation-delay="500">
-               <div class="download-2-img text-center ind-15">
-                  <img class="img-fluid" src="{{ url('public/app/images/image-14.png') }}" alt="download-image">
-               </div>
-            </div>
          </div>
          <!-- End row -->
       </div>
+      <section class="cta-section-ride blue-beck ">
+         <div class="container text-center">
+            <h4><b>Launch Your Branded &amp; Feature-Loaded Tutoring Marketplace<br> With Our Education App Development Services</b></h4>
+            <a href="" class="primary-btn3">Book Free Demo</a>
+         </div>
+      </section>
       <!-- End container -->
    </div>
    <!-- End Inner Background -->
 </section>
-<!-- END DOWNLOAD-2 -->
-<!-- FAQs-1
-   ============================================= -->
-<section id="faqs-1" class="bg-fixed wide-100 faqs-section division">
+<div class="home3-blog-area sec-mar">
    <div class="container">
-      <!-- SECTION TITLE -->
-      <div class="row">
-         <div class="col-md-10 offset-md-1 section-title">
-            <!-- Title 	-->
-            <h2 class="h2-lg">Troubles with MobiCom?</h2>
-            <!-- Text -->
-            <p>Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero tempus, tempor posuere ligula varius
-            </p>
+      <div class="row mb-55  wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+         <div class="col-lg-12 d-flex">
+            <div class="section-title-3">
+               <h2>Looking for Informative Business Content?</h2>
+               <p>Look no further! Our Blogs & videos will keep you up-to-date with the market.</p>
+            </div>
          </div>
-         <!-- End row -->
       </div>
-      <!-- END SECTION TITLE -->
-      <div class="row">
-         <!-- QUESTIONS HOLDER -->
-         <div class="col-lg-6">
-            <div class="questions-holder ind-30">
-               <!-- QUESTION #1 -->
-               <div class="question animated" data-animation="fadeInUp" data-animation-delay="300">
-                  <!-- Question -->
-                  <h5 class="h5-sm">Lobortis sit magna ornare magna egestas?</h5>
-                  <!-- Answer -->
-                  <p>Etiam sit amet mauris suscipit sit amet in odio. Integer congue leo metus. Vitae arcu mollis blandit ultrice ligula egestas magna suscipit lectus magna suscipit luctus undo blandit vitae purus laoreet
-                  </p>
+      <div class="row justify-content-center g-lg-4 gy-5">
+         <div class="col-lg-4 col-md-6 wow animate fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
+            <div class="single-blog magnetic-item">
+               <div class="blog-img">
+                  <img class="img-fluid" src="{{ url('public/assets/img/home-3/home3-blog-01.png') }}" alt>
+                  <div class="blog-tag">
+                     <a href="blog.html">Education App</a>
+                  </div>
                </div>
-               <!-- QUESTION #2 -->
-               <div class="question animated" data-animation="fadeInUp" data-animation-delay="400">
-                  <!-- Question -->
-                  <h5 class="h5-sm">Placeat axime facere omnis volute?</h5>
-                  <!-- Answer -->
-                  <p>An augue egestas an ipsum vitae emo ligula volute ante ipsum primis in faucibus sit ametn in odio. Integer congue leo metus, eu mollis lorem viverra suscipit lectus magna
-                  </p>
-               </div>
-               <!-- QUESTION #3 -->
-               <div class="question animated" data-animation="fadeInUp" data-animation-delay="500">
-                  <!-- Question -->
-                  <h5 class="h5-sm">An interdum lobortis pretium ornare?</h5>
-                  <!-- Answer -->
-                  <p>Feugiat eros, ac tincidunt ligula massa in faucibus orci luctus et ultrices posuere cubilia curae</p>
-               </div>
-               <!-- QUESTION #4 -->
-               <div class="question animated" data-animation="fadeInUp" data-animation-delay="600">
-                  <!-- Question -->
-                  <h5 class="h5-sm">Interdum lobortis pretium ornare?</h5>
-                  <!-- Answer -->
-                  <p>Praesent semper, lacus sed cursus porta, odio augue ligula massa risus laoreet. Laoreet auctor massa varius egestas amet mauris suscipit semper lacus sed cursus porta feugiat primis
-                  </p>
+               <div class="blog-content">
+                  <ul class="blog-meta">
+                     <li><a href="blog.html">May 20, 2023</a></li>
+                     <li><a href="blog.html">Comment (3)</a></li>
+                  </ul>
+                  <h4><a href="blog-details.html">Donec finibus laoreet exte eu pellentesque. </a></h4>
+                  <div class="blog-footer">
+                     <div class="read-btn">
+                        <a href="blog-details.html">
+                           Read More
+                           <svg width="12" height="12" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0 1H12M12 1V13M12 1L0.5 12"></path>
+                           </svg>
+                        </a>
+                     </div>
+                     <div class="social-area">
+                        <ul>
+                           <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
+                           <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
+                           <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
+                           <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
+                        </ul>
+                        <span><img src="{{ url('public/assets/img/home-3/plain-icon.svg') }}" alt></span>
+                     </div>
+                  </div>
                </div>
             </div>
          </div>
-         <!-- END QUESTIONS HOLDER -->
-         <!-- QUESTIONS HOLDER -->
-         <div class="col-lg-6">
-            <div class="questions-holder ind-30">
-               <!-- QUESTION #5 -->
-               <div class="question animated" data-animation="fadeInUp" data-animation-delay="300">
-                  <!-- Question -->
-                  <h5 class="h5-sm">Aliquam dapibus pretium ornare?</h5>
-                  <!-- Answer -->
-                  <p>Feugiat eros ligula massa lipsum primis in orci luctus et ultrices posuere cubilia curae congue lorem. ante ipsum primis in faucibus bibendum sit amet in odio
-                  </p>
+         <div class="col-lg-4 col-md-6 wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+            <div class="single-blog magnetic-item">
+               <div class="blog-img">
+                  <img class="img-fluid" src="{{ url('public/assets/img/home-3/home3-blog-02.png') }}" alt>
+                  <div class="blog-tag">
+                     <a href="blog.html">Education App</a>
+                  </div>
                </div>
-               <!-- QUESTION #6 -->
-               <div class="question animated" data-animation="fadeInUp" data-animation-delay="400">
-                  <!-- Question -->
-                  <h5 class="h5-sm">Pretium purus lacus tempor an ipsum vitae augue egestas emo ligula?</h5>
-                  <!-- Answer -->
-                  <p>Praesent semper lacus sed cursus porta, feugiat primis in orci luctus ligula eros ac ligula massa in faucibus orci luctus et ultrices posuere ante ipsum primis in faucibus bibendum sit amet in odio.
-                  </p>
-               </div>
-               <!-- QUESTION #6 -->
-               <div class="question animated" data-animation="fadeInUp" data-animation-delay="500">
-                  <!-- Question -->
-                  <h5 class="h5-sm">Dapibus lobortis pretium ornare?</h5>
-                  <!-- Answer -->
-                  <p>Praesent semper, lacus sed cursus porta,feugiat primis in faucibus orci luctus tincidunt ligula ultrice sapien egestas lobortis magna
-                  </p>
-               </div>
-               <!-- QUESTION #7 -->
-               <div class="question animated" data-animation="fadeInUp" data-animation-delay="600">
-                  <!-- Question -->
-                  <h5 class="h5-sm">Interdum lobortis pretium ornare?</h5>
-                  <!-- Answer -->
-                  <p>Feugiat eros, ac tincidunt ligula massa in faucibus orci luctus et ultrices posuere cubilia curae integer congue leo metus, eu mollis lorem primis in orci
-                  </p>
+               <div class="blog-content">
+                  <ul class="blog-meta">
+                     <li><a href="blog.html">May 20, 2023</a></li>
+                     <li><a href="blog.html">Comment (3)</a></li>
+                  </ul>
+                  <h4><a href="blog-details.html">feugiat varius mattis mass enim est egestas.</a></h4>
+                  <div class="blog-footer">
+                     <div class="read-btn">
+                        <a href="blog-details.html">
+                           Read More
+                           <svg width="12" height="12" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0 1H12M12 1V13M12 1L0.5 12"></path>
+                           </svg>
+                        </a>
+                     </div>
+                     <div class="social-area">
+                        <ul>
+                           <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
+                           <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
+                           <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
+                           <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
+                        </ul>
+                        <span><img src="{{ url('public/assets/img/home-3/plain-icon.svg') }}" alt></span>
+                     </div>
+                  </div>
                </div>
             </div>
          </div>
-         <!-- END  QUESTIONS HOLDER -->
+         <div class="col-lg-4 col-md-6 wow animate fadeInRight" data-wow-delay="300ms" data-wow-duration="1500ms">
+            <div class="single-blog magnetic-item">
+               <div class="blog-img">
+                  <img class="img-fluid" src="{{ url('public/assets/img/home-3/home3-blog-03.png') }}" alt>
+                  <div class="blog-tag">
+                     <a href="blog.html">Education App</a>
+                  </div>
+               </div>
+               <div class="blog-content">
+                  <ul class="blog-meta">
+                     <li><a href="blog.html">May 20, 2023</a></li>
+                     <li><a href="blog.html">Comment (3)</a></li>
+                  </ul>
+                  <h4><a href="blog-details.html">Navigating the Journey off Cloud Solution.</a></h4>
+                  <div class="blog-footer">
+                     <div class="read-btn">
+                        <a href="blog-details.html">
+                           Read More
+                           <svg width="12" height="12" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0 1H12M12 1V13M12 1L0.5 12"></path>
+                           </svg>
+                        </a>
+                     </div>
+                     <div class="social-area">
+                        <ul>
+                           <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
+                           <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
+                           <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
+                           <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
+                        </ul>
+                        <span><img src="{{ url('public/assets/img/home-3/plain-icon.svg') }}" alt></span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-      <!-- End row -->
    </div>
-   <!-- End container -->
-</section>
-<!-- END FAQs-1 -->
-<!-- PRESS-1
-   ============================================= -->
-<!-- END PRESS-1 -->
-<!-- BLOG-1
-   ============================================= -->
-<!-- END BLOG-1 -->
-<!-- NEWSLETTER-2
-   ============================================= -->
-<section id="newsletter-2" class="bg-scroll bg-green newsletter-section division">
-   <div class="container white-color">
-      <div class="row d-flex align-items-center">
-         <!-- NEWSLETTER TEXT -->
-         <div class="col-lg-6">
-            <div class="newsletter-txt">
-               <!-- Title -->
-               <h3 class="h3-xs">Stay up to date with our news, ideas and updates</h3>
-            </div>
-         </div>
-         <!-- NEWSLETTER FORM -->
-         <div class="col-lg-6">
-            <form class="newsletter-form p-left-30">
-               <div class="input-group">
-                  <input type="email" class="form-control" placeholder="Your email address" required id="s-email">
-                  <span class="input-group-btn">
-                  <button type="submit" class="btn"><i class="fas fa-arrow-right"></i></button>
-                  </span>
-               </div>
-               <!-- Newsletter Form Notification -->
-               <label for="s-email" class="form-notification"></label>
-            </form>
-         </div>
-      </div>
-      <!-- End row -->
-   </div>
-   <!-- End container -->
-</section>
-<!-- END NEWSLETTER-2 -->
+</div>
 @endsection
 
 @section('script')
