@@ -17811,7 +17811,7 @@ body.coming-soon .ui-counter > div .label {
   color: white;
 }
 #hero-1{
-  background-image: radial-gradient(circle at 81% 55%, #1a767f, #0b4149 56%) !important;
+  background-image: radial-gradient(circle at 81% 55%, #fbd2e0, #ff80a9 56%) !important
 }
 ul.banerListTop {
     display: flex;
@@ -17964,7 +17964,7 @@ ul.banerListTop li img {
     padding-right: 250px;
 }
 .lastBigSec, .next-level-section {
-    background-image: radial-gradient(circle at 81% 55%, #1a767f, #0b4149 56%) !important;
+    background-image: radial-gradient(circle at 81% 55%, #fbd2e0, #ff80a9 56%) !important;
     text-align: center;
 }
 .list-addon, .why-choose-list {
@@ -18024,10 +18024,6 @@ body .next-level-section .why-choose-rewamp li p {
     color: #fff;
     font-size: 18px;
     margin-bottom: 20px;
-}
-.why-choose-list li:hover {
-    box-shadow: 0 19px 62px 4px rgb(179 179 179 / 26%);
-    background-color: #0c0c0c;
 }
 
 .modals-list, .modals-list li {
@@ -18105,4 +18101,134 @@ body .next-level-section .why-choose-rewamp li p {
 .modals-list .payement{
     background-color: #d1eeed;
     color: #1aa99b;
+}
+
+.portfolio-lister {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 35px -15px 0;
+    padding: 0;
+}
+.portfolio-lister li:first-child {
+    border-radius: 10px;
+    background-image: radial-gradient(circle at 83% 61%, #feecf2, #ffc6d8 54%);
+}
+.portfolio-lister li {
+    width: calc(50% - 30px);
+    position: relative;
+    padding: 0 30px;
+    border-radius: 6px;
+    background-color: #3bab66;
+    margin: 15px;
+    transition: .4s;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.portfolio-lister li figcaption {
+    width: 45%;
+}
+.portfolio-lister li .portfolio-image {
+    width: 55%;
+    height: auto;
+    align-self: flex-end;
+}
+.portfolio-lister li img {
+    width: 110px;
+    height: 60px;
+    object-fit: contain;
+    object-position: left;
+}
+.portfolio-lister li h4 {
+    font-size: 22px;
+    line-height: normal;
+    color: #3d0613;
+    margin: 0 0 15px;
+}
+.portfolio-lister li a, .portfolio-lister li h4, .portfolio-lister li span {
+    font-weight: 700;
+    letter-spacing: normal;
+    font-stretch: normal;
+    font-style: normal;
+}
+.portfolio-lister li h5 {
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    margin-top: 15px;
+}
+.portfolio-lister li h5, .secondlySec ul li p {
+    font-size: 16px;
+    line-height: 1.75;
+    font-weight: 500;
+    color: #3d0613;
+}
+.portfolio-lister li a {
+    font-size: 18px;
+    line-height: normal;
+    color: #f43371;
+    cursor: pointer;
+    text-decoration: underline !important;
+    display: block;
+}
+.portfolio-lister li:nth-child(2) {
+    border-radius: 10px;
+    background-image: radial-gradient(circle at 81% 55%, #f7ecfe, #f4c6ff 56%);
+}
+
+.new-heading-style h4, .new-heading-style p {
+    color: #3d0613;
+}
+.why-choose-list {
+    flex-wrap: wrap;
+}
+.list-addon, .why-choose-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 -30px;
+    display: flex;
+}
+.why-choose-list li {
+    background-color: transparent !important;
+    border: 1px solid #f43371;
+    border-radius: 0;
+    padding: 20px 15px;
+    margin: 15px;
+}
+.why-choose-list li {
+    width: calc(25% - 30px);
+    margin: 60px 15px 15px;
+    background-color: #eef4f2;
+    padding: 30px;
+    border-radius: 15px;
+    transition: .5s;
+}
+.why-choose-list li img {
+    margin: 0;
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+}
+.why-choose-list li h4 {
+    font-size: 18px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #3d0613;
+    margin: 7.5px 0;
+}
+.why-choose-list li p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.63;
+    color: #3d0613;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+}
+.why-choose-list li p {
+    opacity: .6;
 }
