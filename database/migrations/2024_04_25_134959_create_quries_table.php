@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateComparePlansTable extends Migration
+class CreateQuriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateComparePlansTable extends Migration
      */
     public function up()
     {
-        Schema::create('compare_plans', function (Blueprint $table) {
+        Schema::create('quries', function (Blueprint $table) {
             $table->id();
-            $table->string('plan_id');
-            $table->string('product_id');
-            $table->string('coverage_ammount');
-            $table->string('deductibles');
-            $table->string('price');
+            $table->string('name');
+            $table->string('email');
+            $table->string('phonenumber');
+            $table->longtext('message')->nullable();
             $table->timestamps();
         });
     }
@@ -31,6 +30,6 @@ class CreateComparePlansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('compare_plans');
+        Schema::dropIfExists('quries');
     }
 }

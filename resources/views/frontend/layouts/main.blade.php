@@ -27,31 +27,28 @@
               <div class="modal-dialog modal-dialog-centered">
 
                 <!-- Modal content-->
-                <div class="modal-content">
+                <div class="modal-content" style=" background-image: radial-gradient(circle at 81% 55%, #ff7402, #111111 56%) !important; ">
                     <button type="button" class="close pop-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                     <div class="row">
-                        <div class="col-md-4">
-                            
-                        </div>
-                        <div class="col-md-8">
+                        <div class="col-md-12">
                             <div class="rightsidemodal">
-                                <h4>Let’s Brew Success For Your <br> Business!</h4>
+                                <h4 class="text-white">Let's Distill Success for Your <br> Enterprise!</h4>
                                 <form id="updategeneralepic" method="POST" action="{{ url('sendqnquery') }}">
                                     @csrf
                                     <div class="form-group mb-3">
-                                        <input type="text" placeholder="Name" class="form-control" name="">
+                                        <input required type="text" placeholder="Name" class="formcontrol" name="name">
                                     </div>
                                     <div class="form-group mb-3">
-                                        <input type="text" placeholder="Name" class="form-control" name="">
+                                        <input required type="text" class="formcontrol" placeholder="Email" name="email">
                                     </div>
                                     <div class="form-group mb-3">
-                                        <input type="text" class="form-control" placeholder="Email" name="">
+                                        <input required type="text" class="formcontrol" name="phonenumber" placeholder="Phone Number">
                                     </div>
                                     <div class="form-group mb-3">
-                                        <input type="text" class="form-control" name="" placeholder="Phone Number">
+                                        <textarea required name="message" class="formcontrol" placeholder="Write Your Message"></textarea>
                                     </div>
                                     <div class="form-group mb-3">
-                                        <textarea class="form-control" placeholder="Write Your Message"></textarea>
+                                        <div class="alertmodal text-white"></div>
                                     </div>
                                     <div class="form-group mb-3">
                                         <button class="savechangebutton">Get In Touch</button>
@@ -109,6 +106,7 @@
         });
          $(".primary-btn3").on('click', function(e){
              $('#querymodal').modal('show');
+             $('.alertmodal').html("");
           });
          $('#updategeneralepic').on('submit',(function(e) {
             $('.savechangebutton').html('<i class="fa fa-spin fa-spinner"></i>');
@@ -122,20 +120,38 @@
                 contentType: false,
                 processData: false,
                 success: function(data){
-                    
+                    $('.alertmodal').html("Your Query Submited Successfully. Our Team Will Contact You With In 24 Hours");
+                    $('.savechangebutton').html('Get In Touch');
+                    $('#updategeneralepic').trigger("reset");
+                    setTimeout(function() { 
+                        $('#querymodal').modal('hide');
+                    }, 1000);
                 }
             });
         }));
     </script>
     @yield('script')
     <style type="text/css">
+        .formcontrol{
+            border: 0;
+            border-radius: 0;
+            padding-left: 0;
+            width: 100%;
+            padding: 7px;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            margin-bottom: 10px;
+        }
         .savechangebutton{
-            background-color: #89c728;
+            background-color: #42bd9f;
             font-size: 18px;
             font-weight: bold;
             text-align: left;
             color: #ffffff;
-            border: 1px solid #89c628;
+            border: 1px solid #42bd9f;
             transition: .5s;
             margin-bottom: 0;
             height: 50px;
@@ -165,7 +181,7 @@
             width: 30px;
             height: 30px;
             font-size: 30px;
-            background-color: #a7d86f !important;
+            background-color: #42bd9f !important;
             color: #fff;
             border-radius: 50%;
             top: -10px;

@@ -276,13 +276,13 @@ class AdminController extends Controller
     }
     public function allquotations()
     {
-        $data = DB::table('temproaryquotes')->orderby('id', 'desc')->paginate(10);
+        $data = DB::table('quries')->orderby('id', 'desc')->paginate(10);
         return view('admin/quotations/index')->with(array('data' => $data));
     }
     public function deletequotations($id)
     {
-        DB::table('temproaryquotes')->where('quote_id', $id)->delete();
-        return redirect()->back()->with('message', 'Quote Deleted Successfully');
+        DB::table('quries')->where('id', $id)->delete();
+        return redirect()->back()->with('message', 'Query Deleted Successfully');
     }
     public function messages()
     {

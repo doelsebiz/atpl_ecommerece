@@ -22,24 +22,97 @@
                     <table class="table table-bordered table-head-custom" style="width:100%">
                         <thead>
                             <tr>
-                                <th>Quote ID</th>
-                                <th>Time Ago</th>                            
+                                <th>ID</th>                       
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phonenumber</th>
                                 <th>Date</th>
+                                <th>Time Ago</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <style type="text/css">
+                                .modal-body .col-md-3{
+                                    border: 1px solid #ddd;
+                                    padding: 4px;
+                                }
+                                .modal-body .col-md-9{
+                                    border: 1px solid #ddd;
+                                    padding: 4px;
+                                }
+                            </style>
                             @foreach($data as $r)
+                            <div class="modal" id="myModal{{ $r->id }}">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <!-- Modal body -->
+                                      <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    Name
+                                                </div>
+                                                <div class="col-md-9">
+                                                    {{ $r->name }}
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    Email
+                                                </div>
+                                                <div class="col-md-9">
+                                                    {{ $r->email }}
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    Phonenumber
+                                                </div>
+                                                <div class="col-md-9">
+                                                    {{ $r->phonenumber }}
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    Message
+                                                </div>
+                                                <div class="col-md-9">
+                                                    {{ $r->message }}
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    Date
+                                                </div>
+                                                <div class="col-md-9">
+                                                    {{ Cmf::date_format($r->created_at) }}
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    Time Ago
+                                                </div>
+                                                <div class="col-md-9">
+                                                    {{ Cmf::create_time_ago($r->created_at) }}
+                                                </div>
+                                            </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                                 <tr>
-                                    <td>{{ $r->quote_id }}</td>
+                                   <td>{{ $r->id }}</td>
+                                   <td>{{ $r->name }}</td>
+                                   <td>{{ $r->email }}</td>
+                                   <td>{{ $r->phonenumber }}</td>
                                    <td>{{ Cmf::create_time_ago($r->created_at) }}</td>
                                    <td>{{ Cmf::date_format($r->created_at) }}</td>
                                    <td>
-                                       <a target="_blank" class="btn btn-primary btn-sm" href="{{ url('getquote') }}/{{ $r->quote_id }}"><i class="fa fa-eye"></i> View Quote</a>
-                                       <a onClick="return confirm('Are you sure you want to delete ?');" class="btn btn-danger btn-sm" href="{{ url('admin/quotation/deletequotations') }}/{{ $r->quote_id }}"><i class="fa fa-trash"></i> Delete Quote</a>
+                                       <a data-toggle="modal" data-target="#myModal{{ $r->id }}" class="btn btn-primary btn-sm" href="javascript:vodi(0)"><i class="fa fa-eye"></i> View Quote</a>
+                                       <a onClick="return confirm('Are you sure you want to delete ?');" class="btn btn-danger btn-sm" href="{{ url('admin/quotation/deletequotations') }}/{{ $r->id }}"><i class="fa fa-trash"></i> Delete Quote</a>
                                    </td>
                                 </tr>
-
+                                
                             @endforeach
                         </tbody>
                     </table>

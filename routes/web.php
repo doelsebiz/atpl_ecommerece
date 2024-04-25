@@ -51,10 +51,9 @@ Route::get('/our-services', [SiteController::class, 'ourservices']);
 Route::get('/portfolio', [SiteController::class, 'portfolio']);
 Route::get('/faq', [SiteController::class, 'faq']);
 Route::get('/contact-us', [SiteController::class, 'contactus']);
+Route::post('/sendqnquery', [SiteController::class, 'sendqnquery']);
 
 
-
-Route::get('/health-insurance', [SiteController::class, 'health']);
 Route::get('/product', [SiteController::class, 'product']);
 Route::get('/claim', [SiteController::class, 'claim']);
 Route::get('/resp', [SiteController::class, 'resp']);

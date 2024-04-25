@@ -9,6 +9,7 @@ use App\Models\blogs;
 use App\Models\blogcategories;
 use App\Models\contactus_messages;
 use App\Models\newsletter;
+use App\Models\quries;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
@@ -108,27 +109,14 @@ class SiteController extends Controller
         $data = temproary_sales::where('temp_id' , $id)->first();
         return view('frontend.apply.templatetwo')->with(array('data' => $data));
     }
-    public function backonestep($id)
+    public function sendqnquery(Request $request)
     {
-        $tempr = temproary_sales::where('temp_id' , $id)->first();
-        $sale = temproary_sales::find($tempr->id);
-        $sale->step= $tempr->step-1;
-        $sale->save();
-
-        if($sale->step == 1)
-        {
-            $url = url('step-one').'/'.$id;
-        }
-        if($sale->step == 2)
-        {
-            $url = url('step-two').'/'.$id;
-        }
-        if($sale->step == 3)
-        {
-            $url = url('step-three').'/'.$id;
-        }
-        
-        return Redirect::to($url);
+        $quer = new quries();
+        $quer->name = $request->name;
+        $quer->email = $request->email;
+        $quer->phonenumber = $request->phonenumber;
+        $quer->message = $request->message;
+        $quer->save();
     }
     public function compareplans($id)
     {
