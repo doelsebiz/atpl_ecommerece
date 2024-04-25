@@ -17811,7 +17811,7 @@ body.coming-soon .ui-counter > div .label {
   color: white;
 }
 #hero-1{
-  background-image: radial-gradient(circle at 81% 55%, #f8e074, #f8b654 56%) !important;
+  background-image: url('https://www.code-brew.com/wp-content/uploads/2020/01/header@3x-1.jpg') !important;
 }
 ul.banerListTop {
     display: flex;
@@ -18107,106 +18107,198 @@ body .next-level-section .why-choose-rewamp li p {
     color: #1aa99b;
 }
 
-.common-heading-section {
-    margin-bottom: calc(2rem + 1vw);
-}
-.common-heading-section h2 {
-    margin-top: 0;
-    margin-bottom: 1.125rem;
-    color: white;
-    z-index: 1;
-    position: relative;
-}
-.common-heading-section p {
-    font-size: 1.25rem;
-    color: white;
-    line-height: 1.7;
-}
-.text-lg-left{
-  text-align: left !important;
-}
-.benefits_wrapper {
-    background-image: radial-gradient(circle at 81% 55%, #f8e074, #f8b654 56%) !important;
-    padding: 50px 40px;
-    height: 100%;
-    cursor: pointer;
-}
-.benefits_img {
-    background-color: #fff;
-    display: inline-block;
-    padding: 28px;
-    border-radius: 50%;
-    margin: 0 auto 20px;
-}
-.benefits_img img {
-    width: 40px;
-    height: 40px;
-}
-.benefits_content h4 {
-    line-height: 1.53;
-    margin: 0 auto 20px;
-}
-.benefits_content p {
-    font-size: 20px;
-    line-height: 1.7;
-    margin: 0 auto;
-}
 
-.rental_content {
-    background-color: #08090b;
-    color: #fff;
-    padding: 25px 20px;
-    border-radius: 0px;
+.rated-now-sec {
+    padding: 0;
+    margin: 0;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    position: relative;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-left: -15px;
+    margin-right: -15px;
 }
-.rental_wrapper {
-    border-radius: 40px 0 40px 0;
-    overflow: hidden;
-    transition: all 0.3s;
+.rated-now-sec li {
+    width: calc(33.33% - 30px);
+    padding: 0;
+    background-color: #fff !important;
+    box-shadow: 0 2px 20px 0 rgba(206, 206, 206, .4);
+    margin-top: 0px;
     margin-bottom: 30px;
 }
-  .rental_content:before {
-      content: "";
-      position: absolute;
-      height: 24px;
-      width: 24px;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-image: url(https://www.code-brew.com/wp-content/themes/Avada-Child-Theme/media/2023/03/right-arrow_1.png?var=965123892);
-      right: 75px;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s;
-  }
-  .rental_wrapper img {
-    width: 100%;
-    margin: 0 auto 5px;
+.rated-now-sec li {
+    float: left;
+    margin: 15px;
+    text-align: center;
+    background-color: #f19f27;
+    border-radius: 5px;
+    padding: 40px 15px;
+    position: relative;
+    overflow: hidden;
 }
-.rental_content h5 {
-  color: white;
-    margin-bottom: 0;
+.rated-now-sec li img {
+    height: auto;
+    filter: none;
+    width: 100%;
+}
+.rated-now-sec li img.ico-steal {
+    width: 80px;
+    margin-top: -40px;
+    margin-bottom: -40px;
+    position: relative;
+    top: -5px;
+}
+.rated-now-sec li img {
+    height: auto;
+    filter: none;
+    width: 100%;
+}
+.rated-now-sec li h3 {
+    font-size: 18px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+    margin: 25px 0px;
+}
+.rated-now-sec li p {
+    background-image: none;
+    background-color: #70aa26;
+    flex-direction: column;
+    font-weight: 400;
+    padding: 30px;
+    font-size: 16px;
+}
+.rated-now-sec li p {
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    font-size: 15px;
     font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.47;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+    left: 0;
+    right: 0;
+    bottom: -110%;
+    top: 100%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    transition: .5s;
+}
+.rated-now-sec li p b {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.rated-now-sec li span {
+    border-radius: 4px;
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, .09);
+    background-color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+    padding: 10px 20px;
+    margin-top: 30px;
+}
+.rated-now-sec li:hover p {
+    top: 0;
 }
 
-.cta-wrapper {
-    background: #f9e075;
-    border-radius: 30px;
-    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.12);
+.revolution-sec {
+    background-image: url(https://www.code-brew.com/wp-content/uploads/2020/01/rectangle-copy-35@3x-1.jpg);
+    background-size: cover;
+    background-position: center right;
 }
-.row-flexible-center-all {
+
+.revolution-sec .rated-now-sec li:nth-child(1) {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    padding: 0;
+    position: relative;
+    overflow: visible;
+    box-shadow: none;
+    background-color: transparent !important;
 }
-.robust {
-    margin-top: 0 !important;
-    margin-bottom: 1.125rem !important;
-    color: black !important;
-    z-index: 1 !important;
-    position: relative !important;
+.revolution-sec .rated-now-sec li:nth-child(1):before {
+    content: "+";
+    opacity: 0.11;
+    color: #2ecc71;
+    position: absolute;
+    font-size: 240px;
+    font-weight: 900;
+    top: -100px;
+    line-height: 1;
+    left: -19px;
+}
+.revolution-sec .rated-now-sec li h5 {
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    color: #101011;
+}
+.revolution-sec .rated-now-sec li {
+    text-align: left;
+    padding: 30px;
+    transition: .4s;
+}
+.revolution-sec .rated-now-sec li img {
+    width: auto;
+    height: 45px;
+    margin-bottom: 10px !important;
+}
+.revolution-sec .rated-now-sec li img {
+    margin: 0px;
+}
+.rated-now-sec li img.ico-steal {
+    width: 80px;
+    margin-top: -40px;
+    margin-bottom: -40px;
+    position: relative;
+    top: -5px;
+}
+.revolution-sec .rated-now-sec li h3 {
+    text-align: left;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+.rated-now-sec li h3 {
+    font-size: 18px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+    margin: 25px 0px;
+}
+.revolution-sec .rated-now-sec li figcaption {
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #535353;
 }

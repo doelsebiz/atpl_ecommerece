@@ -35,7 +35,7 @@
                   <h1>Grow Your Business With Innovative Ideas.</h1>
                   <p>Duis a orci nunc. Suspendisse ac convallis sapien, quis commodo libero. Donec nec duomoi luctus, pellentesque lacus sed, mollis going leo.</p>
                   <div class="banner-btn-group">
-                     <a class="primary-btn3" href="contact.html">Free Consultancy</a>
+                     <a class="primary-btn3" href="javascript:void(0)">Free Consultancy</a>
                      <a class="primary-btn4" href="about.html">
                         <span>
                            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -87,8 +87,7 @@ class Cmf
     }
     public static function getwebsite()
     {
-        $data =  DB::table('select_websites')->where('id' ,1)->first();
-        return DB::table('site_settings')->where('smallname' ,$data->name)->first();
+        return DB::table('site_settings')->first();
     }
     public static function sendimagetodirectory($imagename)
     {

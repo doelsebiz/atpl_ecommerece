@@ -1,7 +1,9 @@
 @extends('frontend.layouts.main')
+@php
+    $page = DB::table('travelpages')->where('url' , 'home-service-app')->first();
+@endphp
 @section('tittle')
-<title>Home Service App</title>
-<link rel="canonical" href="{{Request::url()}}">
+@include('frontend.apps.mettatittle')
 @endsection
 @section('content')
 <!-- PLUGINS STYLESHEET -->
@@ -215,7 +217,7 @@ multivendor home services on the go!
 				<div class="row-flexible-center-all">
 					<div class="col-sm-6">
 						<div class="common-heading-section mb-0">
-							<h2>Build a Robust On Demand <br> Home Service App with Us</h2>
+							<h2 class="robust">Build a Robust On Demand <br> Home Service App with Us</h2>
 							<a class="primary-btn3">Book Consultation</a>
 						</div>
 					</div>

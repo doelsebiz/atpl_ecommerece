@@ -19,7 +19,7 @@
                     		<h4>Companies</h4>
                 		</div>
                 		<div class="card-number">
-                    		<h3>{{ DB::table('wp_dh_companies')->count() }}</h3>
+                    		<h3></h3>
                 		</div>
             		</div>
         		</div>
@@ -34,7 +34,7 @@
                     		<h4>Products</h4>
                 		</div>
                 		<div class="card-number">
-                    		<h3>{{ DB::table('wp_dh_products')->where('website' , 'lifeadvice')->count() }}</h3>
+                    		<h3></h3>
                 		</div>
             		</div>
         		</div>
@@ -49,7 +49,7 @@
                     		<h4>Plans</h4>
                 		</div>
                 		<div class="card-number">
-                    		<h3>{{ DB::Table('wp_dh_insurance_plans')->count() }}</h3>
+                    		<h3></h3>
                 		</div>
             		</div>
         		</div>
@@ -64,7 +64,7 @@
                     		<h4>Sales</h4>
                 		</div>
                 		<div class="card-number">
-                    		<h3>{{ DB::Table('sales')->count() }}</h3>
+                    		<h3></h3>
                 		</div>
             		</div>
         		</div>
@@ -79,7 +79,7 @@
                     		<h4>Pending Sales</h4>
                 		</div>
                 		<div class="card-number">
-                    		<h3>{{ DB::Table('sales')->where('status' , 'Pending')->count() }}</h3>
+                    		<h3></h3>
                 		</div>
             		</div>
         		</div>
@@ -94,7 +94,7 @@
                     		<h4>Approve Sale</h4>
                 		</div>
                 		<div class="card-number">
-                    		<h3>{{ DB::Table('sales')->where('status' , 'Approved')->count() }}</h3>
+                    		<h3></h3>
                 		</div>
             		</div>
         		</div>
@@ -109,7 +109,7 @@
                     		<h4>Quotations</h4>
                 		</div>
                 		<div class="card-number">
-                    		<h3>{{ DB::table('quotes')->count() }}</h3>
+                    		<h3></h3>
                 		</div>
             		</div>
         		</div>
@@ -124,7 +124,7 @@
                     		<h4>Requests</h4>
                 		</div>
                 		<div class="card-number">
-                    		<h3>{{ DB::Table('contactus_messages')->count() }} <small style="font-size: 8px;">Contact Requests</small></h3>
+                    		<h3></h3>
                 		</div>
             		</div>
         		</div>
@@ -139,7 +139,7 @@
                     		<h4>Agents</h4>
                 		</div>
                 		<div class="card-number">
-                    		<h3>{{ DB::Table('users')->where('type' , '!=' ,'admin')->count() }}</h3>
+                    		<h3></h3>
                 		</div>
             		</div>
         		</div>
@@ -154,7 +154,7 @@
                     		<h4>News Letters</h4>
                 		</div>
                 		<div class="card-number">
-                    		<h3>{{ DB::Table('news_letters')->count() }}</h3>
+                    		<h3></h3>
                 		</div>
             		</div>
         		</div>
@@ -169,7 +169,7 @@
                     		<h4>FAQ</h4>
                 		</div>
                 		<div class="card-number">
-                    		<h3>{{ DB::Table('frequesntlyaskquestions')->where('website' , 'lifeadvice')->count() }}</h3>
+                    		<h3></h3>
                 		</div>
             		</div>
         		</div>
@@ -184,7 +184,7 @@
                     		<h4>Blogs</h4>
                 		</div>
                 		<div class="card-number">
-                    		<h3>{{ DB::Table('blogs')->where('website' , 'lifeadvice')->count() }}</h3>
+                    		<h3></h3>
                 		</div>
             		</div>
         		</div>

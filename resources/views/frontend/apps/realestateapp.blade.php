@@ -1,7 +1,9 @@
 @extends('frontend.layouts.main')
+@php
+    $page = DB::table('travelpages')->where('url' , 'real-estate-app')->first();
+@endphp
 @section('tittle')
-<title>Real Estate App</title>
-<link rel="canonical" href="{{Request::url()}}">
+@include('frontend.apps.mettatittle')
 @endsection
 @section('content')
 <!-- PLUGINS STYLESHEET -->

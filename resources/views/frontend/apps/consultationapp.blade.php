@@ -1,7 +1,9 @@
 @extends('frontend.layouts.main')
+@php
+    $page = DB::table('travelpages')->where('url' , 'consultation-app')->first();
+@endphp
 @section('tittle')
-<title>Consultation App</title>
-<link rel="canonical" href="{{Request::url()}}">
+@include('frontend.apps.mettatittle')
 @endsection
 @section('content')
 <!-- PLUGINS STYLESHEET -->
@@ -36,7 +38,7 @@
                   </a>
                </h2>
                <div class="onlyRowCtas"> 
-               		<a class="primary-btn3" style="display: inline-block;">Get Started</a>
+               		<a class="primary-btn3" href="javascript:void(0)" style="display: inline-block;">Get Started</a>
                	</div>
                <!-- HERO STORE BADGES -->
                <!-- End Store Badges -->
@@ -123,7 +125,7 @@
 		<h4  class="consultationheading"><b style="display: block;">Want To Develop Online Consultation App For Another Vertical?</b>
 			We’ve Got Your Covered.
 		</h4>
-		<a class="primary-btn3">Get in Touch </a>
+		<a class="primary-btn3" href="javascript:void(0)">Get in Touch </a>
 	</div>
 </section>
 <!-- END HERO-1 -->

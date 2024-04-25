@@ -1,7 +1,9 @@
 @extends('frontend.layouts.main')
+@php
+    $page = DB::table('travelpages')->where('url' , 'ecommerece-app')->first();
+@endphp
 @section('tittle')
-<title>E-Commerce App</title>
-<link rel="canonical" href="{{Request::url()}}">
+@include('frontend.apps.mettatittle')
 @endsection
 @section('content')
 <!-- https://shopking.dev/ -->
@@ -12,20 +14,18 @@
         <div class="columns ini-hero-content">
             <div class="column is-5 has-text-left">
                 <h1 class="title main-title dark-text text-bold is-2 ini-banner-title">
-                    eCommerce App with Laravel Website &amp; Admin Panel with POS | Inventory Management
+                    {{ $page->main_heading }}
                 </h1>
                 <h2 class="subtitle is-5 body-color ini-banner-descrip">
-                    An innovative eCommerce application and business management solution crafted to elevate the performance of single and multi-branch retail businesses
+                    {{ $page->sub_heading }}
                 </h2>
                 <div class="ini-banner-btns">
-                    <a class="primary-btn3" href="{{ url('get-quote') }}?category=ecommerece-application">Get Quote</a>
-                    <a class="primary-btn3" href="{{ url('get-quote') }}?category=ecommerece-application">Schedule a Call</a>
-                    <a class="primary-btn3" href="{{ url('get-quote') }}?category=ecommerece-application">Book Demo</a>
+                    <a class="primary-btn3" href="javascript:void(0)"> {{ $page->main_button_text }}</a>
                 </div>
             </div>
             <div class="column is-7">
                 <figure class="image blob-figure">
-                    <img src="https://shopking.dev/assets/img/features/hero section.png" alt="hero">
+                    <img alt="{{ $page->main_heading }}" src="{{ url('public/images') }}/{{  $page->main_image }}" alt="hero">
                 </figure>
             </div>
         </div>

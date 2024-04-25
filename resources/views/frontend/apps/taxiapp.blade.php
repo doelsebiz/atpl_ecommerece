@@ -1,7 +1,9 @@
 @extends('frontend.layouts.main')
+@php
+    $page = DB::table('travelpages')->where('url' , 'taxi-app')->first();
+@endphp
 @section('tittle')
-<title>Taxi App</title>
-<link rel="canonical" href="{{Request::url()}}">
+@include('frontend.apps.mettatittle')
 @endsection
 @section('content')
 <link rel="stylesheet" href="{{ url('public/assets/css/taxi/style.css') }}" />

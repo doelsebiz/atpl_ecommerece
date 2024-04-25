@@ -1,7 +1,9 @@
 @extends('frontend.layouts.main')
+@php
+    $page = DB::table('travelpages')->where('url' , 'beauty-saloon-app')->first();
+@endphp
 @section('tittle')
-<title>Beauty Saloon App</title>
-<link rel="canonical" href="{{Request::url()}}">
+@include('frontend.apps.mettatittle')
 @endsection
 @section('content')
 <!-- PLUGINS STYLESHEET -->
@@ -34,7 +36,7 @@
                </p>
                <!-- Text -->
                <div class="onlyRowCtas"> 
-               		<a class="primary-btn3" style="display: inline-block;">Get Started</a>
+               		<a class="primary-btn3" href="javascript:void(0)" style="display: inline-block;">Get Started</a>
                	</div>
                <!-- HERO STORE BADGES -->
                <!-- End Store Badges -->
@@ -77,7 +79,7 @@
 			 </p>
 			 <p>Serve beauty services on demand by bridging the gap between customers &amp; stylist or salon owners</p>
 			 
-			 <a class="primary-btn3">Get Started</a>
+			 <a class="primary-btn3" href="javascript:void(0)">Get Started</a>
          </li>
 		  
 		  <li class="wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
@@ -91,7 +93,7 @@
 			  </p>
 			 <p>Build a collaborative online marketplace to sell hot-selling beauty services of various service providers
 </p>
-			 <a class="primary-btn3">Get Started</a>
+			 <a class="primary-btn3" href="javascript:void(0)">Get Started</a>
          </li>
 		  
 		  <li class="wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
@@ -107,7 +109,7 @@
 			 <p>Provide easy appointment booking &amp; manage your clients with fully customized beauty 
 software solution
 </p>
-			 <a class="primary-btn3">Get Started</a>
+			 <a class="primary-btn3" href="javascript:void(0)">Get Started</a>
          </li>
 	  </ul>
 	  
