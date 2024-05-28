@@ -9,22 +9,21 @@ use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use App\Models\companies;
 use App\Models\wp_dh_companies;
-use App\Models\wp_dh_life_plans_benefits;
+use App\Models\services;
 use App\Models\help_articles;
 use App\Models\blogs;
 use App\Models\blogcategories;
-use App\Models\company_info_pages;
 use App\Models\wp_dh_insurance_plans_benefits;
 use App\Models\wp_dh_insurance_plans;
-use App\Models\wp_dh_life_plans;
-use App\Models\wp_dh_products;
+use App\Models\projects;
+use App\Models\testimonials;
 use App\Models\temproaryquotes;
 use App\Models\sales_cards;
 use App\Models\wp_dh_insurance_plans_features;
 use App\Models\wp_dh_insurance_plans_pdfpolicy;
 use App\Models\wp_dh_insurance_plans_deductibles;
 use App\Models\product_categories;
-use App\Models\plan_benifits_categories;
+use App\Models\agents;
 use App\Models\sale_change_requests;
 use App\Models\sale_extend_requests;
 use App\Models\sale_refund_requests;
@@ -40,6 +39,112 @@ class AdminController extends Controller
     public function dashboard()
     {
         return view('admin/dashboard/index');
+    }
+    //testimonials
+
+    public function teams(){
+        $data = agents::all();
+        return view('admin.teams.all')->with(array('data'=>$data));
+    }
+
+    public function addteams(Request $request){
+        $add = new agents();
+        $add->name = $request->name;
+        $add->image = Cmf::sendimagetodirectory($request->image);
+        $add->designation = $request->designation;
+        $add->save();
+        return redirect()->back()->with('message', 'Team Added Successfully');
+    }
+    public function updateteams(Request $request){
+        $add = agents::find($request->id);
+        $add->name = $request->name;
+        $add->designation = $request->designation;
+        if($request->image)
+        {
+            $add->image = Cmf::sendimagetodirectory($request->image);
+        }
+        $add->save();
+        return redirect()->back()->with('message', 'Team Updated Successfully');
+    }
+
+    public function deleteteams($id)
+    {
+        DB::table('agents')->where('id' , $id)->delete();
+        return redirect()->back()->with('message', 'Team Deleted Successfully');
+    }
+
+
+    public function allprojects()
+    {
+        $data = DB::table('projects')->orderby('id', 'DESC')->paginate(10);
+        return view('admin.sales.allprojects')->with(array('data' => $data));
+    }
+
+    public function createproject(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'nullable|string'
+        ]);
+        $category = new projects();
+        $category->name = $request->name;
+        $category->description = $request->description;
+        $category->image = Cmf::sendimagetodirectory($request->image);
+        $category->slug = Cmf::shorten_url($request->name);
+        $category->save();
+        return redirect()->back()->with('message', 'projects Added Successfully');
+    }
+    public function updateproject(Request $request)
+    {
+        $category = projects::find($request->id);
+        $category->name = $request->name;
+        $category->description = $request->description;
+        if($request->image)
+        {
+            $category->image = Cmf::sendimagetodirectory($request->image);
+        }
+        $category->slug = Cmf::shorten_url($request->name);
+        $category->save();
+        return redirect()->back()->with('message', 'projects Added Successfully');
+    }
+    public function deleteproject($id)
+    {
+        projects::where('id' , $id)->delete();
+        $url  =  url('admin/projects/allprojects');
+        return Redirect::to($url);
+    }
+
+    //testimonials
+
+    public function testimonials(){
+        $data = testimonials::all();
+        return view('admin.testimonials.all')->with(array('data'=>$data));
+    }
+
+    public function addtestimonials(Request $request){
+        $add = new testimonials();
+        $add->name = $request->name;
+        $add->image = Cmf::sendimagetodirectory($request->image);
+        $add->testimonial = $request->testimonial;
+        $add->save();
+        return redirect()->back()->with('message', 'Testimonial Added Successfully');
+    }
+    public function updatetestimonials(Request $request){
+        $add = testimonials::find($request->id);
+        $add->name = $request->name;
+        $add->testimonial = $request->testimonial;
+        if($request->image)
+        {
+            $add->image = Cmf::sendimagetodirectory($request->image);
+        }
+        $add->save();
+        return redirect()->back()->with('message', 'Testimonial Updated Successfully');
+    }
+
+    public function deletetestimonials($id)
+    {
+        DB::table('testimonials')->where('id' , $id)->delete();
+        return redirect()->back()->with('message', 'Testimonial Deleted Successfully');
     }
     public function changewebsite($id)
     {
@@ -119,86 +224,53 @@ class AdminController extends Controller
         $url = url('admin/plans/editplanbenifit').'/'.$request->plan_id;
         return Redirect::to($url);
     }
-    public function editproduct($id)
+    public function editservice($id)
     {
-        $data = wp_dh_products::where('pro_id', $id)->first();
-        $pro_fields = unserialize($data->pro_fields);
-        $pro_sort  = unserialize($data->pro_sort);
-        return view('admin.products.editproduct')->with(array('pro_sort' => $pro_sort, 'data' => $data, 'pro_fields' => $pro_fields));
+        $data = services::where('id', $id)->first();
+        return view('admin.services.editservice')->with(array('data' => $data));
+
     }
-    public function updateproducts(Request $request)
+    public function updateservice(Request $request)
     {
-        $category_id = $request->category_id;
-        $pro_name = $request->pro_name;
-        $pro_parent = $request->pro_parent;
-        $pro_supervisa = $request->pro_supervisa;
-        $pro_life = $request->pro_life;
-        $pro_travel_destination = $request->destinationtype;
-        $pro_url = $request->pro_url;
-        $redirect_from_url = $request->redirect_from_url;
-        $quotation_form_on_stylish_page = $request->quotation_form_on_stylish_page;
-        $prod_fields = serialize($request->prod);
-        $sort_orders = array();
-        $i = 1;
-        // print_r($request->sort);exit;
-        foreach ($request->sort as  $order) {
-            $sort_orders[$i] = $order;
-            $i++;
+        $addservice = services::find($request->id);
+        $addservice->name = $request->name;
+        $addservice->url = Cmf::shorten_url($request->name);
+        $addservice->short_description = $request->short_description;
+        $addservice->bullet_points = $request->bullet_points;
+        $addservice->description = $request->description;
+        $addservice->homepage = $request->homepage;
+        if($request->main_image)
+        {
+            $addservice->main_image = Cmf::sendimagetodirectory($request->main_image);
         }
-        // print_r($sort_orders);exit;
-        $sort_orders =  serialize($sort_orders);
-
-
-
-        if ($request->vector) {
-            $vector = Cmf::sendimagetodirectory($request->vector);
-            DB::statement("UPDATE `wp_dh_products` SET `stylish_price_layout`='$request->stylish_price_layout',`stylish_form_layout`='$request->stylish_form_layout',`quotation_form_on_stylish_page`='$request->quotation_form_on_stylish_page',`vector`='$vector',`description`='$request->description',`category_id`='$category_id',`pro_name`='$pro_name',`pro_parent`='$pro_parent',`pro_supervisa`='$pro_supervisa',`pro_life`='$pro_life',`pro_fields`='$prod_fields',`pro_sort`='$sort_orders',`pro_travel_destination`='$pro_travel_destination',`pro_url`='$pro_url', `redirect_from_url`='$redirect_from_url' WHERE `pro_id`='$request->id'");
-        } else {
-            DB::statement("UPDATE `wp_dh_products` SET `stylish_price_layout`='$request->stylish_price_layout',`stylish_form_layout`='$request->stylish_form_layout',`quotation_form_on_stylish_page`='$request->quotation_form_on_stylish_page',`description`='$request->description',`category_id`='$category_id',`pro_name`='$pro_name',`pro_parent`='$pro_parent',`pro_supervisa`='$pro_supervisa',`pro_life`='$pro_life',`pro_fields`='$prod_fields',`pro_sort`='$sort_orders',`pro_travel_destination`='$pro_travel_destination',`pro_url`='$pro_url', `redirect_from_url`='$redirect_from_url' WHERE `pro_id`='$request->id'");
+        if($request->second_image)
+        {
+            $addservice->second_image = Cmf::sendimagetodirectory($request->second_image);
         }
-
-        return redirect()->back()->with('message', 'Product Updated Successfully');
+        $addservice->save();
+        return redirect()->back()->with('message', 'Service Updated Successfully');
     }
 
 
-    public function addnewproducts(Request $request)
+    public function addnewservices(Request $request)
     {
-        $category_id = $request->category_id;
-        $pro_name = $request->pro_name;
-        $pro_parent = $request->pro_parent;
-        $pro_supervisa = $request->pro_supervisa;
-        $pro_life = $request->pro_life;
-        $pro_travel_destination = $request->destinationtype;
-        $pro_url = $request->pro_url;
-        $redirect_from_url = $request->redirect_from_url;
-        $quotation_form_on_stylish_page = $request->quotation_form_on_stylish_page;
-        $prod_fields = serialize($request->prod);
-        $sort_orders = array();
-        $i = 1;
-        // print_r($request->sort);exit;
-        foreach ($request->sort as  $order) {
-            $sort_orders[$i] = $order;
-            $i++;
-        }
-        // print_r($sort_orders);exit;
-        $sort_orders =  serialize($sort_orders);
-
-        $website = 'lifeadvice';
-        $url = Cmf::shorten_url($request->pro_name);
-
-        if ($request->vector) {
-            $vector = Cmf::sendimagetodirectory($request->vector);
-            DB::statement("INSERT INTO `wp_dh_products`(`stylish_price_layout`,`stylish_form_layout`,`quotation_form_on_stylish_page`,`description`,`vector`,`category_id`,`url`,`pro_name`, `pro_parent`, `pro_supervisa`, `pro_life`, `pro_fields`, `pro_sort`, `pro_travel_destination`, `pro_url`, `redirect_from_url`,`website`) VALUES ('$request->stylish_price_layout','$request->stylish_form_layout','$request->quotation_form_on_stylish_page','$request->description','$vector','$category_id','$url','$pro_name','$pro_parent','$pro_supervisa','$pro_life','$prod_fields','$sort_orders','$pro_travel_destination', '$pro_url', '$redirect_from_url','$website')");
-        } else {
-            DB::statement("INSERT INTO `wp_dh_products`(`stylish_price_layout`,`stylish_form_layout`,`quotation_form_on_stylish_page`,`description`,`category_id`,`url`,`pro_name`, `pro_parent`, `pro_supervisa`, `pro_life`, `pro_fields`, `pro_sort`, `pro_travel_destination`, `pro_url`, `redirect_from_url`,`website`) VALUES ('$request->stylish_price_layout','$request->stylish_form_layout','$request->quotation_form_on_stylish_page','$request->description','$category_id','$url','$pro_name','$pro_parent','$pro_supervisa','$pro_life','$prod_fields','$sort_orders','$pro_travel_destination', '$pro_url', '$redirect_from_url','$website')");
-        }
-        return redirect()->back()->with('message', 'Product Added Successfully');
+        $addservice = new services();
+        $addservice->name = $request->name;
+        $addservice->url = Cmf::shorten_url($request->name);
+        $addservice->short_description = $request->short_description;
+        $addservice->description = $request->description;
+        $addservice->homepage = $request->homepage;
+        $addservice->bullet_points = $request->bullet_points;
+        $addservice->main_image = Cmf::sendimagetodirectory($request->main_image);
+        $addservice->second_image = Cmf::sendimagetodirectory($request->second_image);
+        $addservice->save();
+        return redirect()->back()->with('message', 'Service Added Successfully');
     }
 
 
-    public function addnewproduct()
+    public function addnewservice()
     {
-        return view('admin.products.addnewproduct');
+        return view('admin.services.addnewservice');
     }
     public function deleteproducts($id)
     {
@@ -300,10 +372,10 @@ class AdminController extends Controller
         return redirect()->back()->with('message', 'Message Deleted Successfully');
     }
 
-    public function allproducts()
+    public function allservices()
     {
-        $data = DB::table('wp_dh_products')->where('website', 'lifeadvice')->where('status', 1)->orderby('category_id', 'desc')->get();
-        return view('admin.products.index')->with(array('data' => $data));
+        $data = DB::table('services')->orderby('id', 'desc')->get();
+        return view('admin.services.index')->with(array('data' => $data));
     }
     public function allplans()
     {

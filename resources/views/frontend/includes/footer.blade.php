@@ -46,9 +46,9 @@
                     </div>
                     <div class="menu-container">
                         <ul>
-                            <li><a href="service.html">Web Development</a></li>
-                            <li><a href="service.html">App Development</a></li>
-                            <li><a href="service.html">UI/UX Design</a></li>
+                            @foreach(DB::table('services')->limit(4)->get() as $r)
+                            <li><a href="{{ url('') }}/{{ $r->url }}">{{ $r->name }}</a></li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -60,9 +60,10 @@
                     </div>
                     <div class="menu-container">
                         <ul>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="team1.html">Our Team</a></li>
-                            <li><a href="team1.html">FAQs</a></li>
+                            <li><a href="{{ url('about-us') }}">About Us</a></li>
+                            <li><a href="{{ url('contact-us') }}">About Us</a></li>
+                            <li><a href="{{ url('our-team') }}">Our Team</a></li>
+                            <li><a href="{{ url('') }}">FAQs</a></li>
                         </ul>
                     </div>
                 </div>
@@ -74,9 +75,9 @@
                     </div>
                     <div class="menu-container">
                         <ul>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Purchase Code Policy</a></li>
+                            <li><a href="{{ url('terms-and-conditions') }}">Terms & Conditions</a></li>
+                            <li><a href="{{ url('privacy-policy') }}">Privacy Policy</a></li>
+                            <li><a href="{{ url('purchase-code-policy') }}">Purchase Code Policy</a></li>
                         </ul>
                     </div>
                 </div>
@@ -93,10 +94,10 @@
                         </div>
                         <div class="footer-social">
                             <ul>
-                                <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
-                                <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
-                                <li><a href="https://www.linkedin.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
-                                <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
+                                <li><a href="javscript:void(0)"><i class="bx bxl-facebook"></i></a></li>
+                                <li><a href="javscript:void(0)"><i class="bx bxl-twitter"></i></a></li>
+                                <li><a href="javscript:void(0)"><i class="bx bxl-pinterest-alt"></i></a></li>
+                                <li><a href="javscript:void(0)"><i class="bx bxl-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>

@@ -54,10 +54,7 @@ Route::get('/contact-us', [SiteController::class, 'contactus']);
 Route::post('/sendqnquery', [SiteController::class, 'sendqnquery']);
 
 
-Route::get('/product', [SiteController::class, 'product']);
-Route::get('/claim', [SiteController::class, 'claim']);
-Route::get('/resp', [SiteController::class, 'resp']);
-Route::get('/rrsp', [SiteController::class, 'rrsp']);
+Route::get('service/{id}', [SiteController::class, 'servicedetail']);
 Route::get('/mortgage', [SiteController::class, 'mortgage']);
 Route::get('/tfsa', [SiteController::class, 'tfsa']);
 Route::get('/nonmedical', [SiteController::class, 'nonmedical']);
@@ -183,65 +180,32 @@ Route::name('admin.')->prefix('admin')->namespace('App\Http\Controllers\Admin')-
         Route::post('/addnewcompany','AdminController@addnewcompany');
         Route::post('/updatecompanyinfo','AdminController@updatecompanyinfo');
     });
-    Route::name('products.')->prefix('products')->group(function(){
-        Route::get('/allproducts','AdminController@allproducts');
-        Route::get('/addnewproduct','AdminController@addnewproduct');
-        Route::post('/addnewproduct','AdminController@addnewproducts');
-        Route::get('/edit/{id}','AdminController@editproduct');
-        Route::post('/updateproducts','AdminController@updateproducts');
+    Route::name('services.')->prefix('services')->group(function(){
+        Route::get('/allservices','AdminController@allservices');
+        Route::get('/addnewservice','AdminController@addnewservice');
+        Route::post('/addnewservices','AdminController@addnewservices');
+        Route::get('/edit/{id}','AdminController@editservice');
+        Route::post('/updateservice','AdminController@updateservice');
         Route::get('/delete/{id}','AdminController@deleteproducts');
         Route::get('/productcategories','AdminController@productcategories');
         Route::post('/createproductcategory','AdminController@createproductcategory');
         Route::post('/updatproductcategory','AdminController@updatproductcategory');
         Route::get('/deleteproductcategory/{id}','AdminController@deleteproductcategory');
     });
-    Route::name('reports.')->prefix('reports')->group(function(){
-        Route::get('/salesreport','Reportcontroller@salesreport');
-        Route::get('/broker','Reportcontroller@brokercomission');
-        Route::get('/agent','Reportcontroller@agentreport');
-        Route::post('/getagentreport','Reportcontroller@agentreports');
+    Route::name('projects.')->prefix('projects')->group(function(){
+      Route::get('/allprojects','AdminController@allprojects');
+      Route::post('/createproject','AdminController@createproject');
+      Route::post('/updateproject','AdminController@updateproject');
+      Route::get('deleteproject/{id}','AdminController@deleteproject');
     });
-    Route::name('plans.')->prefix('plans')->group(function(){
-        Route::get('/allplans','AdminController@allplans');
-        Route::get('/editplan/{id}','AdminController@editplan');
-        Route::get('/deleteplan/{id}','AdminController@deleteplan');
-        Route::post('createnewplan','AdminController@createnewplan');
-        Route::post('updateplan','AdminController@planupdate');
-        Route::get('/addnewplan','AdminController@addnewplan');
-        Route::get('/addlifeplane','AdminController@addlifeplane');
-        Route::get('/planbenifits','AdminController@planbenifits');
-        Route::get('/addnewplanbenifit','AdminController@addnewplanbenifit');
-        Route::POST('/createplanbenifit','AdminController@createplanbenifit');
-        Route::POST('/getplanattributes','AdminController@getplanattributes');
-        Route::POST('/editbenifit','AdminController@editbenifit');
-        Route::POST('/updatebenifit','AdminController@updatebenifit');
-        Route::POST('/deletebenifit','AdminController@deletebenifit');
-        Route::POST('/clonebenifit','AdminController@clonebenifit');
-        Route::POST('/submitmainclonebenifit','AdminController@submitmainclonebenifit');
-        Route::POST('clonebenifitmain','AdminController@clonebenifitmain');
-        Route::get('/lifeplans','AdminController@lifeplans');
-        Route::get('/lifeplans','AdminController@lifeplans');
-        Route::get('/planbenifitscategories','AdminController@planbenifitscategories');
-        Route::get('/deleteplanbenifitscategories/{id}','AdminController@deleteplanbenifitscategories');
-        Route::post('addnewbenifitcategory','AdminController@addnewbenifitcategory');
-        Route::post('updatbenifitcategory','AdminController@updatbenifitcategory');
-        Route::get('/addlifeplanbenifit','AdminController@addlifeplanbenifit');
-        Route::get('/editlifeplan/{id}','AdminController@editlifeplan');
-        Route::get('/lifeplanbenifits','AdminController@lifeplanbenifits');
-        Route::post('/createnewplanbenifit','AdminController@createnewplanbenifit');
-        Route::post('/createlifeplanbenifit','AdminController@createlifeplanbenifit');
-        Route::post('/updatelifeplanbenifit','AdminController@updatelifeplanbenifit'); 
-        Route::post('/updateplanbenifit','AdminController@updateplanbenifit'); 
-        Route::get('/editplanbenifit/{id}','AdminController@editplanbenifit');
-        Route::get('/editlifeplanbenifit/{id}','AdminController@editlifeplanbenifit');
-        Route::get('/deletelifeplanbenifit/{id}','AdminController@deletelifeplanbenifit');
-        Route::get('/deleteplanbenifit/{id}','AdminController@deleteplanbenifit');
-        Route::get('/deletefeature/{id}','AdminController@deletefeature');
-        Route::get('/saveplanfeature','AdminController@saveplanfeature');
-        Route::get('/addFeatures','AdminController@addFeatures');
-        Route::get('/getcompaniesagainstplan','AdminController@getcompaniesagainstplan');
-        
+
+    Route::name('teams.')->prefix('teams')->group(function(){
+        Route::get('/','AdminController@teams');
+        Route::post('/add','AdminController@addteams');
+        Route::post('/update','AdminController@updateteams');
+        Route::get('/delete/{id}','AdminController@deleteteams');
     });
+    
     Route::name('quotation.')->prefix('quotation')->group(function(){
         Route::get('/allquotations','AdminController@allquotations');
         Route::get('/deletequotations/{id}','AdminController@deletequotations');    
@@ -277,24 +241,11 @@ Route::name('admin.')->prefix('admin')->namespace('App\Http\Controllers\Admin')-
     });
 
 
-    Route::name('sales.')->prefix('sales')->group(function(){
-        Route::get('/allsale','AdminController@allsale');
-        Route::get('/editsale/{id}','AdminController@editsale');
-        Route::post('/editsale','AdminController@editsales');
-        Route::get('/viewsale/{id}','AdminController@viewsale');
-        Route::get('/deletesale/{id}','AdminController@deletesale');
-        Route::get('/sendcode/{id}','AdminController@sendcode');
-        Route::post('/policyconfermation','AdminController@policyconfermation');
-        Route::get('/sendcodetocheck/{id}/{code}','AdminController@showdetailsbutton');
-        Route::get('/changerequest','AdminController@changerequest');
-        Route::get('/extendrequest','AdminController@extendrequest');
-        Route::get('/refundrequest','AdminController@refundrequest');
-        Route::get('/changerequest/delete/{id}','AdminController@changerequestdel');
-        Route::get('/extendrequest/delete/{id}','AdminController@extendrequestdel');
-        Route::get('/refundrequest/delete/{id}','AdminController@refundrequestdel');
-        Route::get('/changerequest/status/{id}','AdminController@changerequeststatus');
-        Route::get('/extendrequest/status/{id}','AdminController@extendrequeststatus');
-        Route::get('/refundrequest/status/{id}','AdminController@refundrequeststatus');
+    Route::name('testimonials.')->prefix('testimonials')->group(function(){
+        Route::get('/','AdminController@testimonials');
+        Route::post('/add','AdminController@addtestimonials');
+        Route::post('/update','AdminController@updatetestimonials');
+        Route::get('/delete/{id}','AdminController@deletetestimonials');
     });
 
     Route::name('faq.')->prefix('faq')->group(function(){

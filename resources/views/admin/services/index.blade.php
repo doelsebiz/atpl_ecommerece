@@ -1,5 +1,5 @@
 @extends('admin.layouts.main-layout')
-@section('title','All Products')
+@section('title','All Service')
 @section('content')
 
 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
@@ -13,8 +13,8 @@
                 <div class="card-header flex-wrap py-5">
                     <div class="card-title">
                         <h3 class="card-label">
-                            All Products
-                            <div class="text-muted pt-2 font-size-sm">Manage All Products</div>
+                            All Service
+                            <div class="text-muted pt-2 font-size-sm">Manage All Service</div>
                         </h3>
                     </div>
                 </div>
@@ -22,9 +22,7 @@
                     <table class="table table-bordered" style="width:100%">
                         <thead>
                             <tr>
-                                <th>Product Name</th>
-                                <th>Category</th>
-                                <th>Supervisa</th>
+                                <th>Service Name</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -32,27 +30,15 @@
                             @foreach($data as $r)
                                 <tr>                                
                                     <td>
-                                        {{ $r->pro_name }}
-                                    </td>
-                                    <td>
-                                        @if($r->category_id)
-                                        {!! strip_tags(DB::table('product_categories')->where('id' , $r->category_id)->first()->name) !!}
-                                        @endif
-                                    </td>
-                                    <td>
-                                        @if($r->pro_supervisa == 1)
-                                        <i class="fa fa-check text-success"></i> Yes
-                                        @else
-                                        <i class="fa fa-times text-danger"></i> No                                        
-                                        @endif
+                                        {{ $r->name }}
                                     </td>
                                    <td>
-                                       <a class="btn btn-primary btn-sm" href="{{ url('admin/products/edit') }}/{{ $r->pro_id }}"><i class="fa fa-edit"></i>Edit</a>
+                                       <a class="btn btn-primary btn-sm" href="{{ url('admin/services/edit') }}/{{ $r->id }}"><i class="fa fa-edit"></i>Edit</a>
 
-                                       <a  data-toggle="modal" data-target="#deleteModal{{ $r->pro_id }}" href="javascript:;" title="Delete" class="btn btn-primary btn-sm"><i class="fa fa-trash"></i>Delete</a>
+                                       <a  data-toggle="modal" data-target="#deleteModal{{ $r->id }}" href="javascript:;" title="Delete" class="btn btn-primary btn-sm"><i class="fa fa-trash"></i>Delete</a>
                                    </td>
                                 </tr>
-                                <div class="modal fade" id="deleteModal{{ $r->pro_id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="deleteModal{{ $r->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -66,7 +52,7 @@
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-light-primary font-weight-bold" data-dismiss="modal">Close</button>
-                                                <a href="{{ url('admin/products/delete') }}/{{ $r->pro_id }}" class="btn btn-danger font-weight-bold">Yes, Delete it</a>
+                                                <a href="{{ url('admin/products/delete') }}/{{ $r->id }}" class="btn btn-danger font-weight-bold">Yes, Delete it</a>
                                             </div>
                                         </div>
                                     </div>

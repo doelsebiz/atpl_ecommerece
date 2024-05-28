@@ -10,6 +10,7 @@ use App\Models\blogcategories;
 use App\Models\contactus_messages;
 use App\Models\newsletter;
 use App\Models\quries;
+use App\Models\services;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
@@ -122,29 +123,10 @@ class SiteController extends Controller
     {
         return view('frontend.formone.compare')->with(array('id' => $id));
     }
-    public function productdetail($id)
+    public function servicedetail($id)
     {
-        $data = wp_dh_products::where('url', $id)->where('website', Cmf::getsite())->first();
-        if ($data) {
-            $fields = unserialize($data->pro_fields);
-            $sortfields = unserialize($data->pro_sort);
-            $wp_dh_insurance_plans = wp_dh_insurance_plans::select('wp_dh_insurance_plans.id')->where('product', $data->pro_id)->get();
-            $sum_insured = DB::select("SELECT `sum_insured` FROM `wp_dh_insurance_plans_rates` WHERE `plan_id` IN (SELECT `id` FROM `wp_dh_insurance_plans` WHERE `product`='$data->pro_id') GROUP BY `sum_insured` ORDER BY CAST(`sum_insured` AS DECIMAL)");
-            return view('frontend.formone.index')->with(array('data' => $data, 'orderdata' => $sortfields, 'fields' => $fields, 'sum_insured' => $sum_insured));
-        } else {
-            return response()->view('frontend.errors.404', [], 404);
-        }
-    }
-    public function quotes(Request $request)
-    {
-        $quoteNumber = rand();
-        $data = wp_dh_products::where('pro_id', $request->product_id)->first();
-        $fields = unserialize($data->pro_fields);
-        $plan = DB::table('wp_dh_insurance_plans', $data->pro_id)->first();
-        $ded = DB::table('wp_dh_insurance_plans_deductibles')->where('plan_id', $plan->id)->groupby('deductible1')->get();
-        $query = "CAST(`sum_insured` AS DECIMAL)";
-        $sum = DB::table('wp_dh_insurance_plans_rates')->where('plan_id', $plan->id)->groupby('sum_insured')->orderByRaw($query)->get();
-        return view('frontend.formone.quote')->with(array('quoteNumber' => $quoteNumber, 'data' => $data, 'fields' => $fields, 'ded' => $ded, 'sum' => $sum, 'request' => $request));
+        $data = services::where('url', $id)->first();
+        return view('frontend.services.servicedetail')->with(array('data' => $data));
     }
     public function blogdetail($id)
     {
@@ -157,42 +139,7 @@ class SiteController extends Controller
         $data = DB::table('blogs')->where('category_id', $category->id)->where('website', 'lifeadvice')->paginate(9);
         return view('frontend.blogs.bycategory')->with(array('data' => $data, 'category' => $category));
     }
-    public function supervisa()
-    {
-
-        $data = wp_dh_products::where('url', 'super-visa-insurance')->first();
-        if ($data) {
-
-            $fields = unserialize($data->pro_fields);
-
-            $sortfields = unserialize($data->pro_sort);
-
-            $wp_dh_insurance_plans = wp_dh_insurance_plans::select('wp_dh_insurance_plans.id')->where('product', $data->pro_id)->get();
-
-            $sum_insured = wp_dh_insurance_plans_rates::select('wp_dh_insurance_plans_rates.sum_insured')->whereIn('plan_id', $wp_dh_insurance_plans)->groupby('sum_insured')->get();
-
-            return view('frontend.travelinsurance.super-visa')->with(array('data' => $data, 'orderdata' => $sortfields, 'fields' => $fields, 'sum_insured' => $sum_insured));
-        } else {
-            return response()->view('frontend.errors.404', [], 404);
-        }
-    }
-    public function travel()
-    {
-        $data = wp_dh_products::where('url', 'travel-insurance')->first();
-
-        if ($data) {
-            $fields = unserialize($data->pro_fields);
-            $sortfields = unserialize($data->pro_sort);
-
-            $wp_dh_insurance_plans = wp_dh_insurance_plans::select('wp_dh_insurance_plans.id')->where('product', $data->pro_id)->get();
-
-            $sum_insured = wp_dh_insurance_plans_rates::select('wp_dh_insurance_plans_rates.sum_insured')->whereIn('plan_id', $wp_dh_insurance_plans)->groupby('sum_insured')->get();
-
-            return view('frontend.travelinsurance.travelinsurance')->with(array('data' => $data, 'orderdata' => $sortfields, 'fields' => $fields, 'sum_insured' => $sum_insured));
-        } else {
-            return response()->view('frontend.errors.404', [], 404);
-        }
-    }
+    
     public function singletripinsurance()
     {
         $data = wp_dh_products::where('url', 'single-trip-insurance')->first();

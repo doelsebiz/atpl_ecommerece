@@ -61,12 +61,53 @@
                         <span class="menu-text">Contact Messages</span>
                     </a>
                 </li>
+                <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                    <a href="{{ url('admin/projects/allprojects') }}" class="menu-link menu-toggle">
+                        <span class="material-symbols-outlined">format_quote</span>
+                        <span class="menu-text">All Projects</span>
+                    </a>
+                </li>
+                <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <span class="material-symbols-outlined">pages</span>
+                        <span class="menu-text">Manage Services</span><i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu">
+                        <i class="menu-arrow"></i>
+                        <ul class="menu-subnav">
+                            <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                <span class="menu-link"><span class="menu-text">Manage Services</span></span>
+                            </li>
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="{{ url('admin/services/allservices') }}" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot"><span></span></i><span class="menu-text">All Services</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="{{ url('admin/services/addnewservice') }}" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot"><span></span></i><span class="menu-text">Add Service</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="menu-section">
                     <h4 class="menu-text">COMPANY</h4>
                     <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
                 </li>
 
-
+                 <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                    <a href="{{ url('admin/testimonials') }}" class="menu-link menu-toggle">
+                        <span class="material-symbols-outlined">business_messages</span>
+                        <span class="menu-text">Testimonials</span>
+                    </a>
+                </li>
+                <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                    <a href="{{ url('admin/teams') }}" class="menu-link menu-toggle">
+                        <span class="material-symbols-outlined">people</span>
+                        <span class="menu-text">Team Members</span>
+                    </a>
+                </li>
                 <li class="menu-item">
                     <a href="{{route('view_news')}}" class="menu-link">
                         <span class="material-symbols-outlined">unsubscribe</span>
