@@ -279,44 +279,30 @@
                <h2>Complited Projects</h2>
                <p>Services are professional offerings provided by businesses to meet specific needs or solve problems for their customers. Services can range from your budject.</p>
             </div>
-            <div class="view-all-btn">
-               <a class="primary-btn3" href="{{ url('portfolio') }}">View All Project</a>
-            </div>
          </div>
       </div>
    </div>
-   <div class="container-fluid">
-      <div class="row">
-         <div class="col-lg-12">
-            <div class="swiper home3-success-stories-slider">
-               <div class="swiper-wrapper">
-                  @foreach(DB::table('projects')->get() as $r)
-                  <div class="swiper-slide">
-                     <div class="success-storie-card">
-                        <div class="success-img">
-                           <img class="img-fluid magnetic-item" src="{{ url('public/images') }}/{{ $r->image }}" alt>
-                        </div>
-                        <div class="success-content">
-                           <h3><a href="{{ url('project') }}/{{ $r->slug }}">{{ $r->name }}</a></h3>
-                           <div class="view-btn">
-                              <a href="{{ url('project') }}/{{ $r->slug }}">
-                                 <svg width="12" height="12" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0 1H12M12 1V13M12 1L0.5 12"></path>
-                                 </svg>
-                              </a>
-                           </div>
-                        </div>
-                     </div>
+   <div class="container">
+      <div class="row justify-content-center g-lg-4 gy-5">
+         @foreach(DB::table('projects')->orderby('id' , 'desc')->limit(3)->get() as $r)
+         <div class="col-lg-4 col-md-6 wow animate fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
+            <div class="success-storie-card">
+               <div class="success-img">
+                  <img class="img-fluid magnetic-item" src="{{ url('public/images') }}/{{ $r->image }}" alt>
+               </div>
+               <div class="success-content">
+                  <h3><a href="{{ url('project') }}/{{ $r->slug }}">{{ $r->name }}</a></h3>
+                  <div class="view-btn">
+                     <a href="{{ url('project') }}/{{ $r->slug }}">
+                        <svg width="12" height="12" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M0 1H12M12 1V13M12 1L0.5 12"></path>
+                        </svg>
+                     </a>
                   </div>
-                  @endforeach
                </div>
             </div>
          </div>
-      </div>
-      <div class="row pt-50">
-         <div class="col-lg-12 position-relative">
-            <div class="swiper-pagination11"></div>
-         </div>
+         @endforeach
       </div>
    </div>
 </div>
@@ -390,30 +376,41 @@
       </div>
    </div>
 </div>
-<div class="home3-team-area sec-mar">
+<div class="home4-experts-section sec-mar">
    <div class="container">
-      <div class="row mb-55 wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-         <div class="col-lg-12 d-flex justify-content-center">
-            <div class="section-title-3 text-center">
-               <h2>Team Members</h2>
-               <p>Services are professional offerings provided by businesses to meet specific needs or solve problems for their customers. Services can range from your budject.</p>
+      <div class="row wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+         <div class="col-lg-12">
+            <div class="section-title-4 text-center two">
+               <span>Experts & Talented Staff</span>
+               <h2>We Have <span>Top Class Expertise</span> For Creative Service</h2>
             </div>
          </div>
       </div>
       <div class="row">
-         @foreach(DB::table('agents')->get() as $r)
-         <div class="col-lg-3 col-sm-6 experts wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-            <div class="experts-card magnetic-item">
-               <div class="experts-img">
-                  <img class="img-fluid" src="{{ url('public/images') }}/{{ $r->image }}" alt>
-               </div>
-               <div class="experts-content">
-                  <h4>{{ $r->name }}</h4>
-                  <span>{{ $r->designation }}</span>
+         <div class="col-lg-12">
+            <div class="swiper home3-team-slider">
+               <div class="swiper-wrapper">
+                  @foreach(DB::table('agents')->get() as $r)
+                  <div class="swiper-slide">
+                     <div class="single-team">
+                        <div class="team-img">
+                           <img class="img-fluid" src="{{ url('public/images') }}/{{ $r->image }}" alt>
+                        </div>
+                        <div class="team-content">
+                           <h5>{{ $r->name }}</h5>
+                           <span>{{ $r->designation }}</span>
+                        </div>
+                     </div>
+                  </div>
+                  @endforeach
                </div>
             </div>
          </div>
-         @endforeach
+      </div>
+      <div class="row pt-50">
+         <div class="col-lg-12 position-relative">
+            <div class="swiper-pagination22"></div>
+         </div>
       </div>
    </div>
 </div>

@@ -55,7 +55,7 @@ Route::post('/sendqnquery', [SiteController::class, 'sendqnquery']);
 
 
 Route::get('service/{id}', [SiteController::class, 'servicedetail']);
-Route::get('/mortgage', [SiteController::class, 'mortgage']);
+Route::get('/project/{id}', [SiteController::class, 'projectdetail']);
 Route::get('/tfsa', [SiteController::class, 'tfsa']);
 Route::get('/nonmedical', [SiteController::class, 'nonmedical']);
 Route::get('/about-us', [SiteController::class, 'aboutus']);

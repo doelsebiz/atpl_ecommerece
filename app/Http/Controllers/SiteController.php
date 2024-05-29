@@ -11,6 +11,7 @@ use App\Models\contactus_messages;
 use App\Models\newsletter;
 use App\Models\quries;
 use App\Models\services;
+use App\Models\projects;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
@@ -140,17 +141,10 @@ class SiteController extends Controller
         return view('frontend.blogs.bycategory')->with(array('data' => $data, 'category' => $category));
     }
     
-    public function singletripinsurance()
+    public function projectdetail($id)
     {
-        $data = wp_dh_products::where('url', 'single-trip-insurance')->first();
-        if ($data) {
-            $fields = unserialize($data->pro_fields);
-            $wp_dh_insurance_plans = wp_dh_insurance_plans::select('wp_dh_insurance_plans.id')->where('product', $data->pro_id)->get();
-            $sum_insured = wp_dh_insurance_plans_rates::select('wp_dh_insurance_plans_rates.sum_insured')->whereIn('plan_id', $wp_dh_insurance_plans)->groupby('sum_insured')->get();
-            return view('frontend.companypages.singletripinsurance')->with(array('data' => $data, 'fields' => $fields, 'sum_insured' => $sum_insured));
-        } else {
-            return response()->view('frontend.errors.404', [], 404);
-        }
+        $data = projects::where('slug', $id)->first();
+        return view('frontend.portfolio.projectdetail')->with(array('data' => $data));
     }
     public function visitorinsurance()
     {
